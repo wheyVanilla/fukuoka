@@ -5,421 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>福岡慢活漫遊｜2026/10/31–11/5</title>
 <style>
-  :root{
-    --paper:#fbf8f2; --ink:#2f2b27; --muted:#756f68; --line:#e7dfd4;
-    --sage:#627462; --sage2:#e9efe7; --tea:#9a6844; --tea2:#f3e8dc;
-    --gold:#c79b4f; --blue:#587187; --blue2:#eaf0f4; --rose:#a96c6c;
-    --card:#fffdf9; --shadow:0 12px 32px rgba(55,43,29,.08);
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.72}
-  a{color:#365f6f;text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:1120px;margin:auto;padding:0 20px 80px}
-  .hero{max-width:1180px;margin:0 auto;padding:28px 20px 10px}
-  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:stretch}
-  .hero-copy{background:linear-gradient(135deg,#f1eadf,#e8efe6);border:1px solid var(--line);border-radius:28px;padding:42px 38px;box-shadow:var(--shadow)}
-  .eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--tea);font-weight:700}
-  h1{font-size:clamp(36px,6vw,64px);line-height:1.06;margin:8px 0 16px;font-weight:760;letter-spacing:-.035em}
-  .hero-copy p{font-size:18px;margin:0;color:#514b45}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-  .chip{display:inline-flex;align-items:center;gap:7px;background:#fffaf3;border:1px solid #e3d7c8;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:650}
-  .collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;min-height:390px}
-  .collage figure{margin:0;position:relative;overflow:hidden;border-radius:20px;background:#ddd;box-shadow:var(--shadow)}
-  .collage figure:first-child{grid-row:1/3}
-  .collage img{width:100%;height:100%;object-fit:cover;display:block}
-  .collage figcaption{position:absolute;left:10px;bottom:8px;background:rgba(30,28,25,.72);color:#fff;border-radius:999px;padding:5px 9px;font-size:11px}
-  .toolbar{position:sticky;top:8px;z-index:10;max-width:1080px;margin:18px auto 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;padding:0 20px}
-  button,.btn{border:1px solid #d7cec2;background:rgba(255,253,249,.94);backdrop-filter:blur(8px);color:#48413a;border-radius:999px;padding:9px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.05)}
-  button:hover,.btn:hover{background:white;text-decoration:none}
-  section{margin-top:46px}
-  h2{font-size:28px;line-height:1.2;margin:0 0 16px;letter-spacing:-.02em}
-  h3{font-size:21px;margin:0 0 8px;line-height:1.25}
-  .lead{color:var(--muted);max-width:820px}
-  .notice{border-left:5px solid var(--gold);background:#fff9e9;border-radius:12px;padding:14px 16px;margin:18px 0}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 7px 20px rgba(61,47,33,.045)}
-  .card.soft{background:var(--sage2)}
-  .card.blue{background:var(--blue2)}
-  .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;border-radius:999px;padding:4px 8px;margin-bottom:8px;background:#efe8de;color:#6a5543}
-  .tag.must{background:#f4dfd9;color:#824c46}.tag.rest{background:#e0ede0;color:#446044}.tag.opt{background:#e7edf4;color:#465f77}
-  .summary-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
-  .summary-table th,.summary-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-  .summary-table th{font-size:12px;color:var(--muted);background:#f6f0e8;letter-spacing:.04em}
-  .summary-table tr:last-child td{border-bottom:0}
-  .day{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
-  .day-head{display:grid;grid-template-columns:190px 1fr;min-height:150px}
-  .day-photo{position:relative;background:linear-gradient(135deg,#d8e2d5,#eadfce);overflow:hidden}
-  .day-photo img{width:100%;height:100%;object-fit:cover;display:block}
-  .day-photo .date{position:absolute;top:12px;left:12px;background:rgba(25,25,22,.72);color:#fff;border-radius:12px;padding:8px 10px;font-weight:800;font-size:12px}
-  .day-title{padding:22px 24px;display:flex;flex-direction:column;justify-content:center}
-  .day-title p{margin:5px 0 0;color:var(--muted)}
-  .timeline{padding:6px 22px 20px}
-  .slot{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:13px 0;border-top:1px solid #eee6dc}
-  .time{font-weight:800;color:var(--sage);font-variant-numeric:tabular-nums}
-  .slot strong{display:block;margin-bottom:2px}
-  .optional{margin-top:9px;padding:10px 12px;background:#f4f7fa;border:1px dashed #b9c8d4;border-radius:12px;color:#536575;font-size:14px}
-  details{border-top:1px solid var(--line);background:#fcfaf6}
-  details summary{cursor:pointer;padding:13px 22px;font-weight:800;color:#594d42;list-style:none}
-  details summary::-webkit-details-marker{display:none}
-  details summary::before{content:"＋";display:inline-block;width:22px;color:var(--tea)}
-  details[open] summary::before{content:"−"}
-  .detail-body{padding:0 22px 18px;color:#504943}
-  .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .route{padding:10px 12px;border-radius:12px;background:#f2eee8;margin:8px 0}
-  .route b{color:#4d5e4d}
-  .links{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
-  .links a{font-size:12px;font-weight:700;border:1px solid #d8d0c5;border-radius:999px;padding:5px 9px;background:white}
-  .shopping{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  .shop-card{padding:16px;background:#fff;border:1px solid var(--line);border-radius:16px}
-  .shop-card b{display:block;font-size:16px;margin-bottom:4px}
-  .shop-card small{color:var(--muted)}
-  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .todo-group{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
-  .todo{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid #eee8df}
-  .todo:first-of-type{border-top:0}
-  .todo input{margin-top:6px;transform:scale(1.2)}
-  .todo label{cursor:pointer}
-  .todo input:checked+label{text-decoration:line-through;color:#9a948d}
-  .food-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  .food{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
-  .food .where{font-size:12px;color:var(--muted);margin-bottom:5px}
-  .key{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-  .key div{border-radius:14px;padding:14px;background:#fff;border:1px solid var(--line)}
-  .sources{font-size:12px;color:#6f6962}
-  .sources li{margin:7px 0}
-  .photo-credit{font-size:11px;color:#888;margin-top:18px}
-  footer{text-align:center;color:#867e75;font-size:12px;margin-top:50px}
-  @media(max-width:800px){
-    .hero-grid{grid-template-columns:1fr}.collage{min-height:300px}.hero-copy{padding:30px 24px}
-    .grid,.shopping,.checklist,.food-grid,.key{grid-template-columns:1fr}.day-head{grid-template-columns:1fr}.day-photo{height:200px}.mini-grid{grid-template-columns:1fr}.slot{grid-template-columns:72px 1fr}.summary-table{font-size:13px}.summary-table th,.summary-table td{padding:10px 9px}.toolbar{justify-content:center}
-  }
-  @media print{
-    body{background:white}.toolbar{display:none}.wrap,.hero{max-width:none}.day,.card,.summary-table{box-shadow:none;break-inside:avoid}details{display:block}details .detail-body{display:block!important}details summary{display:none}a{color:#222;text-decoration:none}.hero-grid{grid-template-columns:1fr}.collage{display:none}
-  }
+:root{--paper:#fbf8f2;--ink:#2e2a26;--muted:#746d66;--line:#e6ddd1;--sage:#667866;--sage2:#eaf0e7;--tea:#986643;--tea2:#f4e8db;--gold:#c49a50;--blue:#5a7288;--blue2:#edf2f5;--rose:#a66d69;--card:#fffdf9;--shadow:0 12px 32px rgba(55,43,29,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.72}a{color:#356073;text-decoration:none}a:hover{text-decoration:underline}.hero{max-width:1180px;margin:auto;padding:28px 20px 8px}.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:18px}.hero-copy{background:linear-gradient(135deg,#f1eadf,#e6eee5);border:1px solid var(--line);border-radius:28px;padding:40px 36px;box-shadow:var(--shadow)}.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--tea);font-weight:800}h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin:8px 0 16px;letter-spacing:-.035em}h2{font-size:28px;line-height:1.2;margin:0 0 16px}h3{font-size:21px;line-height:1.3;margin:0 0 7px}.hero-copy p{font-size:18px;color:#514b45;margin:0}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.chip{display:inline-flex;align-items:center;gap:6px;background:#fffaf3;border:1px solid #e3d7c8;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700}.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;min-height:390px}.collage figure{margin:0;position:relative;overflow:hidden;border-radius:20px;background:#ddd;box-shadow:var(--shadow)}.collage figure:first-child{grid-row:1/3}.collage img,.day-photo img{width:100%;height:100%;object-fit:cover;display:block}.collage figcaption{position:absolute;left:10px;bottom:8px;background:rgba(30,28,25,.72);color:#fff;border-radius:999px;padding:5px 9px;font-size:11px}.toolbar{position:sticky;top:8px;z-index:10;max-width:1080px;margin:18px auto 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;padding:0 20px}.toolbar button{border:1px solid #d7cec2;background:rgba(255,253,249,.95);backdrop-filter:blur(8px);color:#48413a;border-radius:999px;padding:9px 14px;font:inherit;font-size:13px;font-weight:800;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.05)}.wrap{max-width:1120px;margin:auto;padding:0 20px 80px}section{margin-top:44px}.lead{color:var(--muted);max-width:860px}.notice{border-left:5px solid var(--gold);background:#fff8e7;border-radius:12px;padding:14px 16px;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:0 7px 20px rgba(61,47,33,.045)}.card.soft{background:var(--sage2)}.card.blue{background:var(--blue2)}.tag{display:inline-block;font-size:11px;font-weight:850;letter-spacing:.05em;border-radius:999px;padding:4px 8px;margin-bottom:8px;background:#efe8de;color:#6a5543}.tag.must{background:#f4dfd9;color:#824c46}.tag.rest{background:#e0ede0;color:#446044}.tag.opt{background:#e7edf4;color:#465f77}.summary-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.summary-table th,.summary-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.summary-table th{font-size:12px;color:var(--muted);background:#f6f0e8}.summary-table tr:last-child td{border-bottom:0}.day{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}.day-head{display:grid;grid-template-columns:190px 1fr;min-height:150px}.day-photo{position:relative;background:linear-gradient(135deg,#d8e2d5,#eadfce);overflow:hidden}.date{position:absolute;top:12px;left:12px;background:rgba(25,25,22,.72);color:#fff;border-radius:12px;padding:8px 10px;font-weight:800;font-size:12px}.day-title{padding:22px 24px;display:flex;flex-direction:column;justify-content:center}.day-title p{margin:5px 0 0;color:var(--muted)}.timeline{padding:6px 22px 20px}.slot{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:13px 0;border-top:1px solid #eee6dc}.time{font-weight:850;color:var(--sage);font-variant-numeric:tabular-nums}.slot strong{display:block;margin-bottom:2px}.optional{margin-top:9px;padding:10px 12px;background:#f4f7fa;border:1px dashed #b9c8d4;border-radius:12px;color:#536575;font-size:14px}details{border-top:1px solid var(--line);background:#fcfaf6}details summary{cursor:pointer;padding:13px 22px;font-weight:800;color:#594d42;list-style:none}details summary::-webkit-details-marker{display:none}details summary::before{content:"＋";display:inline-block;width:22px;color:var(--tea)}details[open] summary::before{content:"−"}.detail-body{padding:0 22px 18px;color:#504943}.route{padding:10px 12px;border-radius:12px;background:#f2eee8;margin:8px 0}.links{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.links a{font-size:12px;font-weight:750;border:1px solid #d8d0c5;border-radius:999px;padding:5px 9px;background:white}.shopping,.food-grid,.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.shop-card,.food,.todo-group{padding:16px;background:#fff;border:1px solid var(--line);border-radius:16px}.shop-card b,.food b{display:block;font-size:16px;margin-bottom:4px}.shop-card small,.food .where{color:var(--muted)}.key{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.key div{border-radius:14px;padding:14px;background:#fff;border:1px solid var(--line)}.todo{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid #eee8df}.todo:first-of-type{border-top:0}.todo input{margin-top:6px;transform:scale(1.2)}.todo input:checked+label{text-decoration:line-through;color:#999}.flightbox{display:grid;grid-template-columns:1fr 1fr;gap:14px}.flight{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.flight .big{font-size:23px;font-weight:850}.done{color:#426244;font-weight:800}.small{font-size:12px;color:var(--muted)}footer{text-align:center;color:#867e75;font-size:12px;margin-top:50px}
+@media(max-width:800px){.hero-grid,.grid,.shopping,.food-grid,.checklist,.key,.flightbox{grid-template-columns:1fr}.collage{min-height:300px}.hero-copy{padding:30px 24px}.day-head{grid-template-columns:1fr}.day-photo{height:200px}.slot{grid-template-columns:74px 1fr}.summary-table{font-size:13px}.summary-table th,.summary-table td{padding:10px 9px}.toolbar{justify-content:center}}
+@media print{body{background:white}.toolbar{display:none}.wrap,.hero{max-width:none}.day,.card,.summary-table,.flight{box-shadow:none;break-inside:avoid}details .detail-body{display:block!important}details summary{display:none}.collage{display:none}}
 </style>
 </head>
 <body>
-<div class="hero">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow">Fukuoka Slow Journey · 3 people</div>
-      <h1>福岡慢活漫遊<br>6天5夜</h1>
-      <p>2026/10/31（六）– 11/5（四）｜爸媽＋女兒<br>每天只放一個主題，下午留休息，晚上保留自由時間。</p>
-      <div class="chips">
-        <span class="chip">✈️ TPE → FUK 12:40–16:00</span>
-        <span class="chip">✈️ FUK → TPE 17:00–18:30</span>
-        <span class="chip">🏨 天神住宿 5 晚</span>
-        <span class="chip">🍵 八女茶</span>
-        <span class="chip">♨️ 私人湯＋大浴場</span>
-        <span class="chip">🏮 屋台體驗</span>
-      </div>
-    </div>
-    <div class="collage">
-      <figure><img alt="八女福島老街" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Yame-fukushima%20fukuoka%20japan.JPG"><figcaption>八女福島</figcaption></figure>
-      <figure><img alt="太宰府天滿宮" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Dazaifu_Tenmangu.jpg"><figcaption>太宰府</figcaption></figure>
-      <figure><img alt="那珂川清滝" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nakagawa%20Seiryu%2001.jpg"><figcaption>那珂川清滝</figcaption></figure>
+<div class="hero"><div class="hero-grid">
+  <div class="hero-copy">
+    <div class="eyebrow">Fukuoka Slow Journey · 3 people</div>
+    <h1>福岡慢活漫遊<br>6天5夜</h1>
+    <p>2026/10/31（六）– 11/5（四）｜爸媽＋女兒<br>每天一個主題、下午一定休息、晚上保留自由時間。</p>
+    <div class="chips">
+      <span class="chip">✅ 機票已訂</span><span class="chip">✈️ AK1510 11:55–15:20</span><span class="chip">✈️ AK1511 16:20–18:10</span>
+      <span class="chip">🍵 八女茶</span><span class="chip">♨️ 私人湯＋大浴場</span><span class="chip">🏮 屋台體驗</span>
     </div>
   </div>
-</div>
-
-<div class="toolbar">
-  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">展開全部執行細節</button>
-  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">收合細節</button>
-  <button onclick="window.print()">列印 / 存成 PDF</button>
-</div>
-
+  <div class="collage">
+    <figure><img alt="八女福島" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Yame-fukushima%20fukuoka%20japan.JPG"><figcaption>八女福島</figcaption></figure>
+    <figure><img alt="太宰府天滿宮" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Dazaifu_Tenmangu.jpg"><figcaption>太宰府</figcaption></figure>
+    <figure><img alt="福岡塔" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Fukuoka_Tower_2017.jpg"><figcaption>福岡</figcaption></figure>
+  </div>
+</div></div>
+<div class="toolbar"><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">展開全部執行細節</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">收合細節</button><button onclick="window.print()">列印 / 存成 PDF</button></div>
 <main class="wrap">
 <section>
-  <h2>這趟旅行的節奏</h2>
-  <p class="lead">「慢活漫遊」不是把時間填滿，而是每天有一個值得記住的主題，走累就坐下來喝茶或咖啡。括號中的行程全部都是備用選項：有精神才加，沒精神就不去。</p>
+  <h2>已確認：航班</h2>
+  <div class="flightbox">
+    <div class="flight"><span class="tag must">去程 · 已訂</span><div class="big">10/31　TPE 11:55 → FUK 15:20</div><p>AirAsia AK1510｜桃園第一航廈 → 福岡｜直飛 2h25m</p><div class="done">✓ 3 位乘客｜Trip.com｜含托運與選位</div></div>
+    <div class="flight"><span class="tag must">回程 · 已訂</span><div class="big">11/5　FUK 16:20 → TPE 18:10</div><p>AirAsia AK1511｜福岡 → 桃園第一航廈｜直飛 2h50m</p><div class="done">✓ 3 位乘客｜Trip.com｜含托運與選位</div></div>
+  </div>
+  <div class="notice"><b>交通策略：</b>10/31 早上從左營搭高鐵到桃園；去程抓 08:30 前後抵達桃園機場最安心。11/5 抵台後再接機捷＋高鐵回左營，回程高鐵不要壓太緊。</div>
+</section>
+<section>
+  <h2>旅行原則：慢活漫遊</h2>
+  <p class="lead">主線永遠只有一個。括號裡的景點都是「有精神再去」，不是任務。爸媽走累就坐下來喝茶或咖啡，下午留一段真正的休息；晚上只寫「自由時間」，想逛街、吃屋台或回飯店都可以。</p>
   <div class="key">
     <div><b>🌿 每天一主題</b><br><small>八女、太宰府、市區、自然溫泉各自一天。</small></div>
-    <div><b>☕ 下午要坐下</b><br><small>咖啡／水果／八女茶放在 14–16 時，不排晚上喝咖啡。</small></div>
-    <div><b>🛍️ 晚上自由</b><br><small>不寫死誰跟誰；想休息就回飯店，想逛就照購物清單走。</small></div>
-    <div><b>🧩 括號才是加碼</b><br><small>備用景點不影響主線，空檔再決定。</small></div>
+    <div><b>☕ 下午要坐下</b><br><small>14–16 時安排茶、咖啡、甜點或泡湯後休息。</small></div>
+    <div><b>🛍️ 晚上自由</b><br><small>購物、屋台、散步或回房，不排硬性景點。</small></div>
+    <div><b>🧩 括號＝加碼</b><br><small>有體力才加，沒有就刪。</small></div>
   </div>
 </section>
-
 <section>
-  <h2>住宿：先鎖定天神，兩間房總價 CAD 300–400 / 晚</h2>
-  <div class="notice"><b>住宿目前尚未定案。</b> 先訂「可免費取消」的房型最重要；兩間房優先要求 <b>same floor / rooms close to each other</b>。以下是依地點與 5 晚便利性排序，實際 10/31–11/5 房價與庫存仍以訂房當下為準。</div>
+  <h2>住宿：目前第一候選 Dormy Inn</h2>
+  <div class="notice"><b>住宿尚未下訂。</b> 預算為兩間房合計 CAD 300–400 / 晚；爸媽一間、女兒一間。先找可免費取消方案，若九州住宿補助正式適用，再比較是否重訂補助方案。</div>
   <div class="grid">
-    <div class="card soft">
-      <span class="tag must">首選</span>
-      <h3>Tokyu Stay Fukuoka Tenjin</h3>
-      <p>適合連住：多數房型有房內洗脫烘與微波爐。爸媽可選 Twin，你可選 Single / Double；住五晚不用天天整理換洗衣物。</p>
-      <div class="links">
-        <a href="https://www.tokyustay.co.jp/en/hotel/fukuoka-tenjin/" target="_blank">官方網站</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Tokyu+Stay+Fukuoka+Tenjin" target="_blank">地圖</a>
-      </div>
-    </div>
-    <div class="card">
-      <span class="tag opt">位置最好比價款</span>
-      <h3>Hotel Oriental Express Fukuoka Tenjin</h3>
-      <p>天神站西口步行約 1 分鐘。若兩間房總價落在預算內，適合爸媽減少每天走回飯店的距離。</p>
-      <div class="links">
-        <a href="https://tenjin.hotelorientalexpress.com/en/" target="_blank">官方網站</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Oriental+Express+Fukuoka+Tenjin" target="_blank">地圖</a>
-      </div>
-    </div>
-    <div class="card">
-      <span class="tag opt">漂亮升級款</span>
-      <h3>The Gate Hotel Fukuoka by HULIC</h3>
-      <p>天神站 5 號出口直結／步行約 1 分鐘。若剛好促銷讓兩間房不超過 CAD 400/晚，可以直接升級。</p>
-      <div class="links">
-        <a href="https://www.gate-hotel.jp/en/fukuoka/" target="_blank">官方網站</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=The+Gate+Hotel+Fukuoka+by+HULIC" target="_blank">地圖</a>
-      </div>
-    </div>
+    <div class="card soft"><span class="tag must">目前最對味</span><h3>Dormy Inn PREMIUM 博多 Canal City 前</h3><p>媽媽喜歡「有賺到」的飯店：夜鳴拉麵、泡湯後冰品、早晨乳酸菌飲料，加上天然溫泉大浴場。晚上有人想留飯店也不無聊。</p><div class="links"><a target="_blank" href="https://dormy-hotels.com/dormyinn/hotels/hakatacanal/">官方網站</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dormy+Inn+Premium+Hakata+Canal+City+Mae">地圖</a></div></div>
+    <div class="card"><span class="tag opt">備選</span><h3>Dormy Inn 博多祇園</h3><p>同樣有 Dormy 招牌宵夜與大浴場，靠近祇園、博多與川端；如果 Premium 價差太大就比這間。</p><div class="links"><a target="_blank" href="https://dormy-hotels.com/dormyinn/hotels/hakata/">官方網站</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dormy+Inn+Hakata+Gion">地圖</a></div></div>
+    <div class="card blue"><span class="tag opt">位置取向</span><h3>天神區飯店</h3><p>若最後還是想把母女購物便利放第一，則回頭選天神。Dormy 的取捨是晚間去天神多一小段交通，但飯店本身更有「休息＋免費小確幸」。</p></div>
   </div>
 </section>
-
 <section>
   <h2>六天總覽</h2>
-  <table class="summary-table">
-    <thead><tr><th>日期</th><th>主題</th><th>下午休息</th><th>晚上</th></tr></thead>
-    <tbody>
-      <tr><td>10/31 六</td><td>高雄 → 桃園 → 福岡</td><td>飛機上／飯店</td><td>簡單晚餐、早休息</td></tr>
-      <tr><td>11/1 日</td><td><b>八女白壁老街＋茶＋工藝</b></td><td>八女茶＋和菓子</td><td>自由時間：天神購物</td></tr>
-      <tr><td>11/2 一</td><td><b>太宰府慢慢走</b></td><td>水果甜點／休息</td><td>豆腐・湯葉晚餐＋自由時間</td></tr>
-      <tr><td>11/3 二</td><td><b>大濠公園＋市區慢遊</b></td><td>REC COFFEE</td><td>屋台體驗＋自由時間</td></tr>
-      <tr><td>11/4 三</td><td><b>溪谷散步＋那珂川清滝</b></td><td>泡湯後休息</td><td>最後採買＋整理行李</td></tr>
-      <tr><td>11/5 四</td><td>慢早餐＋最後採買 → 回台灣</td><td>機場</td><td>桃園 → 左營</td></tr>
-    </tbody>
-  </table>
+  <table class="summary-table"><thead><tr><th>日期</th><th>主題</th><th>下午休息</th><th>晚上</th></tr></thead><tbody>
+  <tr><td>10/31 六</td><td>高雄 → 桃園 → 福岡</td><td>飯店放空</td><td>簡單晚餐、早休息</td></tr>
+  <tr><td>11/1 日</td><td><b>八女白壁老街＋八女茶＋工藝</b></td><td>茶與和菓子</td><td>自由時間：天神／Canal City</td></tr>
+  <tr><td>11/2 一</td><td><b>太宰府慢慢走</b></td><td>梅枝餅＋茶／甜點</td><td>自由時間：購物或休息</td></tr>
+  <tr><td>11/3 二</td><td><b>大濠公園＋市區慢遊</b></td><td>福岡咖啡</td><td>屋台體驗＋自由時間</td></tr>
+  <tr><td>11/4 三</td><td><b>中ノ島公園＋那珂川清滝</b></td><td>泡湯後休息</td><td>最後採買／飯店宵夜</td></tr>
+  <tr><td>11/5 四</td><td>慢早餐＋最後採買 → 回台灣</td><td>機場</td><td>桃園 → 左營</td></tr>
+  </tbody></table>
 </section>
-
+<section><h2>Day 1｜10/31（六）抵達福岡</h2><article class="day">
+  <div class="day-head"><div class="day-photo" style="background:linear-gradient(135deg,#dbe6e9,#ead8c7)"><div class="date">DAY 1 · TRAVEL</div></div><div class="day-title"><span class="tag rest">不要排景點</span><h3>高雄 → 桃園 → 福岡</h3><p>第一天只做移動、入住與吃飯，15:20 抵達讓晚上還有一點餘裕。</p></div></div>
+  <div class="timeline"><div class="slot"><div class="time">06:30–07:00</div><div><strong>左營出發</strong>高鐵到桃園後轉機捷到 T1，目標 08:30–09:00 抵達機場。</div></div><div class="slot"><div class="time">11:55</div><div><strong>AK1510 起飛</strong>桃園第一航廈 → 福岡。</div></div><div class="slot"><div class="time">15:20</div><div><strong>抵達 FUK</strong>入境＋行李抓 45–75 分鐘。</div></div><div class="slot"><div class="time">17:00</div><div><strong>入住飯店</strong>三人＋行李以計程車或直達巴士為主，不折騰。</div></div><div class="slot"><div class="time">18:00</div><div><strong>附近吃簡單晚餐</strong>定食、蕎麥、烏龍麵都好。<div class="optional">（有精神：Canal City／川端商店街散步 30–60 分鐘；沒精神直接回房。）</div></div></div></div>
+</article></section>
+<section><h2>Day 2｜11/1（日）八女：最有慢活味道的一天</h2><article class="day">
+  <div class="day-head"><div class="day-photo"><img alt="八女福島" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Yame-fukushima%20fukuoka%20japan.JPG"><div class="date">DAY 2 · YAME</div></div><div class="day-title"><span class="tag must">整天保留</span><h3>白壁町家・工藝・八女茶</h3><p>不加柳川。老街、午餐、工藝、茶，讓一天慢慢展開。</p></div></div>
+  <div class="timeline"><div class="slot"><div class="time">08:30</div><div><strong>出發</strong>西鐵福岡（天神）→ 西鐵久留米 → 巴士往八女福島；正式班表出發前一週再確認。</div></div><div class="slot"><div class="time">10:30</div><div><strong>白壁老街慢走</strong>看到茶舖、味噌、和菓子、町家就進去看看，不照打卡清單趕。</div></div><div class="slot"><div class="time">12:00</div><div><strong>午餐</strong>定食／蕎麥／豆腐類，媽媽以蔬菜比例高為優先。</div></div><div class="slot"><div class="time">13:15</div><div><strong>八女傳統工藝</strong>提燈、和紙、久留米絣等。</div></div><div class="slot"><div class="time">14:30–15:30</div><div><strong>八女茶休息</strong>玉露或煎茶＋和菓子，這天不另外追咖啡店。</div></div><div class="slot"><div class="time">17:30</div><div><strong>回福岡</strong>晚餐後自由時間。<div class="optional">（自由選項：天神地下街、岩田屋／三越、Canal City；或直接回飯店泡湯。）</div></div></div></div>
+</article></section>
+<section><h2>Day 3｜11/2（一）太宰府：半日就好</h2><article class="day">
+  <div class="day-head"><div class="day-photo"><img alt="太宰府天滿宮" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Dazaifu_Tenmangu.jpg"><div class="date">DAY 3 · DAZAIFU</div></div><div class="day-title"><span class="tag rest">下午留白</span><h3>天滿宮・參道・梅枝餅</h3><p>早點去、慢慢走，中午後回市區；不要把整天塞滿。</p></div></div>
+  <div class="timeline"><div class="slot"><div class="time">08:45</div><div><strong>出發</strong>西鐵福岡（天神）→ 二日市 → 太宰府。</div></div><div class="slot"><div class="time">09:30–11:00</div><div><strong>太宰府天滿宮</strong>參拜、拍照、庭園慢走。</div></div><div class="slot"><div class="time">11:00–12:00</div><div><strong>參道休息</strong>梅枝餅＋茶。</div></div><div class="slot"><div class="time">12:00</div><div><strong>午餐</strong>蕎麥、烏龍麵或簡單定食。</div></div><div class="slot"><div class="time">14:00–15:00</div><div><strong>回福岡休息</strong>真正坐下來一小時。<div class="optional">（有精神：九州國立博物館／回天神逛街；沒精神：回飯店。）</div></div></div><div class="slot"><div class="time">晚上</div><div><strong>自由時間</strong>想吃一次豆腐・湯葉料理可安排這晚。</div></div></div>
+</article></section>
+<section><h2>Day 4｜11/3（二）福岡市區：散步＋咖啡</h2><article class="day">
+  <div class="day-head"><div class="day-photo" style="background:linear-gradient(135deg,#dce7e1,#e3edf5)"><div class="date">DAY 4 · FUKUOKA</div></div><div class="day-title"><span class="tag rest">文化之日・彈性日</span><h3>大濠公園＋福岡城周邊</h3><p>這天當天氣 buffer。只走市區，累了隨時縮短。</p></div></div>
+  <div class="timeline"><div class="slot"><div class="time">09:30</div><div><strong>大濠公園</strong>沿湖慢慢走，不追里程。</div></div><div class="slot"><div class="time">11:00</div><div><strong>舞鶴公園／福岡城跡</strong>選一小段走即可。</div></div><div class="slot"><div class="time">12:30</div><div><strong>午餐</strong>可安排植物性料理、蔬菜多的日式定食或 vegan ramen。</div></div><div class="slot"><div class="time">14:30–15:30</div><div><strong>咖啡休息</strong>REC COFFEE 或 MANU COFFEE；咖啡放下午，不排晚上。</div></div><div class="slot"><div class="time">18:30+</div><div><strong>屋台體驗</strong>正常吃過晚餐或先墊胃，再去天神／中洲屋台點 1–2 樣、看氣氛。<div class="optional">（有精神：中洲河畔散步；沒精神：回飯店吃 Dormy 夜鳴拉麵。）</div></div></div></div>
+</article></section>
+<section><h2>Day 5｜11/4（三）自然＋私人湯</h2><article class="day">
+  <div class="day-head"><div class="day-photo" style="background:linear-gradient(135deg,#d7e4d4,#e5dccb)"><div class="date">DAY 5 · ONSEN</div></div><div class="day-title"><span class="tag must">爸爸主菜</span><h3>中ノ島公園＋那珂川清滝</h3><p>輕鬆走河谷，不爬大山。爸媽私人湯，你去女大浴場。</p></div></div>
+  <div class="timeline"><div class="slot"><div class="time">09:00</div><div><strong>出發</strong>天神／博多 → 大橋站，叫 GO Taxi 前往中ノ島公園。</div></div><div class="slot"><div class="time">10:00–11:10</div><div><strong>森林溪谷輕散步</strong>60–70 分鐘即可；爸媽狀態不好就縮成 30–45 分鐘。</div></div><div class="slot"><div class="time">11:20</div><div><strong>叫車去那珂川清滝</strong>山區不要賭路邊攔車。</div></div><div class="slot"><div class="time">11:45–12:45</div><div><strong>館內午餐</strong>吃完再泡比較舒服。</div></div><div class="slot"><div class="time">13:00</div><div><strong>泡湯</strong>爸媽一起家族貸切風呂；你先進女大浴場。媽媽若家族湯結束後還想跟你泡公共浴場，再另外購買一般入館即可。</div></div><div class="slot"><div class="time">13:50–14:20</div><div><strong>爸爸休息</strong>可去館內休息區滑手機、按摩、喝飲料；媽媽若想繼續泡可去女湯找你。</div></div><div class="slot"><div class="time">14:20–15:00</div><div><strong>三人會合、喝東西</strong>搭免費接駁回大橋，再回福岡。</div></div><div class="slot"><div class="time">晚上</div><div><strong>自由時間</strong>最後採買或回飯店泡湯、吃夜鳴拉麵。</div></div></div>
+  <details><summary>交通與預約</summary><div class="detail-body"><div class="route"><b>不租車版本：</b>大橋站 → GO Taxi → 中ノ島公園 → GO Taxi → 清滝 → 清滝免費接駁 → 大橋站。</div><p>家族湯先預約，時間確定後再反推當天叫車與午餐。出發前一週再次確認接駁時刻。</p><div class="links"><a target="_blank" href="https://www.nakagawaseiryu.jp/">那珂川清滝官網</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Nakagawa+Seiryu">地圖</a></div></div></details>
+</article></section>
+<section><h2>Day 6｜11/5（四）最後半天＋回台灣</h2><article class="day">
+  <div class="day-head"><div class="day-photo" style="background:linear-gradient(135deg,#eee5d7,#dfe7ea)"><div class="date">DAY 6 · HOME</div></div><div class="day-title"><span class="tag rest">不要排遠程</span><h3>慢早餐・最後採買・機場</h3><p>16:20 的飛機，上午還能舒服吃早餐與補買東西。</p></div></div>
+  <div class="timeline"><div class="slot"><div class="time">08:30</div><div><strong>慢早餐</strong>飯店或附近 café。</div></div><div class="slot"><div class="time">10:00–11:30</div><div><strong>最後採買</strong>藥妝、伴手禮、昨天猶豫沒買的東西。</div></div><div class="slot"><div class="time">11:30–12:30</div><div><strong>午餐＋拿行李</strong>不要去需要排很久的店。</div></div><div class="slot"><div class="time">13:00</div><div><strong>前往 FUK</strong>三人有行李直接 Taxi 最省事。</div></div><div class="slot"><div class="time">16:20</div><div><strong>AK1511 起飛</strong>18:10 抵達桃園 T1。</div></div><div class="slot"><div class="time">20:00+</div><div><strong>機捷 → 高鐵桃園 → 左營</strong>回程高鐵留足入境與領行李 buffer。</div></div></div>
+</article></section>
 <section>
-  <h2>Day 1｜10/31（六）抵達福岡</h2>
-  <article class="day">
-    <div class="day-head">
-      <div class="day-photo" style="background:linear-gradient(135deg,#dce7ea,#ead8c8)"><div class="date">DAY 1 · TRAVEL</div></div>
-      <div class="day-title"><span class="tag rest">不要排景點</span><h3>高雄 → 桃園 → 福岡 → 天神</h3><p>第一天只完成移動、入住與吃飯。不要因為「都來了」又硬塞一個景點。</p></div>
-    </div>
-    <div class="timeline">
-      <div class="slot"><div class="time">07:00–07:30</div><div><strong>左營高鐵出發</strong>目標 09:30 左右抵達桃園機場第一航廈。高鐵班次等開賣後再鎖定。</div></div>
-      <div class="slot"><div class="time">12:40</div><div><strong>TPE 起飛</strong>AirAsia 直飛福岡。</div></div>
-      <div class="slot"><div class="time">16:00</div><div><strong>抵達 FUK</strong>入境＋拿行李抓 45–75 分鐘。</div></div>
-      <div class="slot"><div class="time">17:15–18:00</div><div><strong>前往天神、Check-in</strong>三人＋行李以計程車最省力；若機場巴士剛好快到，也可搭直達天神的巴士。</div></div>
-      <div class="slot"><div class="time">18:30</div><div><strong>飯店附近簡單晚餐</strong>日式定食、烏龍麵、蕎麥都可以，避免第一晚排隊名店。<div class="optional">（若還有精神：警固公園 → 天神地下街走 30–45 分鐘；沒精神直接回房。）</div></div></div>
-    </div>
-    <details><summary>執行細節</summary><div class="detail-body">
-      <div class="route"><b>交通原則：</b>左營 → 高鐵桃園 → 機捷 A18 → 第一航廈。到福岡後不要為省小錢拖行李轉多次車。</div>
-      <p><b>這晚要做：</b>確認三人手機網路、隔天交通 IC 卡、買水／早餐／小零食；回房後把 11/1 八女交通截圖存手機。</p>
-    </div></details>
-  </article>
-</section>
-
-<section>
-  <h2>Day 2｜11/1（日）八女：這趟最有「慢活」味道的一天</h2>
-  <article class="day">
-    <div class="day-head">
-      <div class="day-photo"><img alt="八女福島白壁老街" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Yame-fukushima%20fukuoka%20japan.JPG"><div class="date">DAY 2 · YAME</div></div>
-      <div class="day-title"><span class="tag must">整天保留</span><h3>白壁町家・工藝・八女茶</h3><p>不加柳川、不趕景點。老街、午餐、工藝、茶，讓一天自己慢慢展開。</p></div>
-    </div>
-    <div class="timeline">
-      <div class="slot"><div class="time">08:30–09:00</div><div><strong>從天神出發</strong>西鐵福岡（天神）→ 西鐵久留米 → 巴士往八女福島。11 月正式班表出發前一週再確認。</div></div>
-      <div class="slot"><div class="time">10:30–11:45</div><div><strong>八女福島白壁老街慢走</strong>不用照景點清單打卡；看到茶舖、味噌、和菓子、傳統町家就進去看看。</div></div>
-      <div class="slot"><div class="time">12:00–13:00</div><div><strong>午餐</strong>找定食／蕎麥／豆腐類，媽媽以蔬菜比例高為優先，不要求全素。</div></div>
-      <div class="slot"><div class="time">13:15–14:15</div><div><strong>八女傳統工藝</strong>看提燈、和紙、久留米絣等；星期日安排比星期一安全。</div></div>
-      <div class="slot"><div class="time">14:30–15:40</div><div><strong>八女茶＋和菓子</strong>把這段當真正休息，不再塞咖啡。可去橫町町家交流館／八女茶 café 一帶。</div></div>
-      <div class="slot"><div class="time">15:40–16:20</div><div><strong>小店慢逛</strong>茶葉、器皿、伴手禮。<div class="optional">（若還有精神：再選一間老町家／堺屋；若累就直接提早回福岡。）</div></div></div>
-      <div class="slot"><div class="time">18:00+</div><div><strong>回天神、晚餐 → 自由時間</strong>第一晚購物建議先逛百貨／地下街，不急著大量買藥妝。</div></div>
-    </div>
-    <details><summary>執行細節＋自由時間購物</summary><div class="detail-body">
-      <div class="mini-grid">
-        <div><b>最省腦交通</b><div class="route">西鐵天神 → 西鐵久留米 → 西鐵巴士 31/32 系統方向 → 福島周邊。到八女後以步行為主。</div></div>
-        <div><b>晚上 60–90 分鐘購物線</b><div class="route">天神地下街 → 三越／岩田屋 → 回飯店。雨天也幾乎不受影響。</div></div>
-      </div>
-      <div class="links"><a target="_blank" href="https://en.yame.travel/access/">八女官方交通</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Yame+Fukushima+White+Wall+Townscape">八女福島地圖</a></div>
-    </div></details>
-  </article>
-</section>
-
-<section>
-  <h2>Day 3｜11/2（一）太宰府：經典，但不趕</h2>
-  <article class="day">
-    <div class="day-head">
-      <div class="day-photo"><img alt="太宰府天滿宮" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Dazaifu_Tenmangu.jpg"><div class="date">DAY 3 · DAZAIFU</div></div>
-      <div class="day-title"><span class="tag rest">半日＋下午休息</span><h3>天滿宮・參道・梅枝餅</h3><p>早上去太宰府，中午後回天神，下午留給休息、甜點與自由時間。</p></div>
-    </div>
-    <div class="timeline">
-      <div class="slot"><div class="time">09:00</div><div><strong>天神出發</strong>西鐵福岡（天神）→ 西鐵二日市 → 太宰府。</div></div>
-      <div class="slot"><div class="time">09:45–11:15</div><div><strong>太宰府天滿宮＋境內散步</strong>慢慢拍照，不追著導覽路線跑。</div></div>
-      <div class="slot"><div class="time">11:15–12:00</div><div><strong>參道休息</strong>梅枝餅＋煎茶／抹茶。</div></div>
-      <div class="slot"><div class="time">12:00–13:00</div><div><strong>午餐</strong>烏龍麵／蕎麥／定食。</div></div>
-      <div class="slot"><div class="time">13:00–14:00</div><div><strong>參道最後慢逛</strong><div class="optional">（若沒事做：光明禪寺周邊散步；九州國立博物館通常星期一休館，所以不列主行程。）</div></div></div>
-      <div class="slot"><div class="time">14:45–15:45</div><div><strong>回天神坐下休息</strong>推薦「南國水果 Parlour」：不一定喝咖啡，吃季節水果／甜點。</div></div>
-      <div class="slot"><div class="time">17:30–19:00</div><div><strong>晚餐：梅之花 天神</strong>豆腐、湯葉為主，很適合「喜歡蔬菜但不是嚴格素食」的媽媽。若要指定 vegan / vegetarian menu，需預約時先告知。</div></div>
-      <div class="slot"><div class="time">19:00+</div><div><strong>自由時間</strong>今天適合「百貨系」：ONE FUKUOKA BLDG、PARCO、岩田屋、三越。</div></div>
-    </div>
-    <details><summary>執行細節</summary><div class="detail-body">
-      <p><b>慢活判斷：</b>如果太宰府當天人很多，參道不要每家都排；挑一間梅枝餅＋一間想看的店即可。下午回天神比在太宰府硬耗更舒服。</p>
-      <div class="links"><a target="_blank" href="https://www.dazaifutenmangu.or.jp/en/">太宰府官方</a><a target="_blank" href="https://gofukuoka.jp/spots/detail/9036">梅之花資訊</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Nangoku+Fruits+Parlour+Fukuoka">水果 Parlour 地圖</a></div>
-    </div></details>
-  </article>
-</section>
-
-<section>
-  <h2>Day 4｜11/3（二・文化之日）市區慢遊＋屋台</h2>
-  <article class="day">
-    <div class="day-head">
-      <div class="day-photo"><img alt="大濠公園" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/%C5%8Chori_Park_The_swanboats_on_%C5%8Chori_Ike_%C5%8Chorik%C5%8Den_Ch%C5%AB%C5%8D-ku_Fukuoka_20260609_155114.jpg"><div class="date">DAY 4 · CITY</div></div>
-      <div class="day-title"><span class="tag rest">假日避開遠程交通</span><h3>大濠公園・日本庭園・下午咖啡・屋台</h3><p>今天是日本國定假日，乾脆留在市區。行程可伸可縮，是整趟的 weather buffer。</p></div>
-    </div>
-    <div class="timeline">
-      <div class="slot"><div class="time">09:30–10:30</div><div><strong>大濠公園</strong>不用硬走完整湖一圈，走舒服的段落就好。</div></div>
-      <div class="slot"><div class="time">10:30–11:20</div><div><strong>大濠公園日本庭園</strong>11 月營業到 17:00，這天安排早上最悠閒。<div class="optional">（若還有精神：舞鶴公園／福岡城跡；若下雨：福岡市美術館。）</div></div></div>
-      <div class="slot"><div class="time">11:45–13:00</div><div><strong>午餐</strong>兩個方向：想吃蔬菜多 → VEGETABLE LIFE CAFE；想吃一般日式料理 → 大濠／天神找定食即可。</div></div>
-      <div class="slot"><div class="time">14:15–15:15</div><div><strong>REC COFFEE · Tenjin One Building</strong>這是今天真正的咖啡時間，坐滿 45–60 分鐘，不排晚上喝咖啡。</div></div>
-      <div class="slot"><div class="time">15:15–17:00</div><div><strong>自由時間／飯店休息</strong>想逛就逛 ONE FUKUOKA BLDG、PARCO；累就回房。</div></div>
-      <div class="slot"><div class="time">18:00</div><div><strong>正常晚餐</strong>屋台不當正式晚餐，避免排隊把大家餓壞。</div></div>
-      <div class="slot"><div class="time">19:00–20:30</div><div><strong>福岡屋台體驗</strong>去中洲看河景最有「福岡夜晚」感；只選一攤、吃 1–2 樣。如果排隊超過 15 分鐘就換攤或只散步。<div class="optional">（不想走中洲：直接改天神屋台，離飯店更近。）</div></div></div>
-    </div>
-    <details><summary>執行細節＋屋台策略</summary><div class="detail-body">
-      <div class="mini-grid"><div><b>屋台不是台灣夜市</b><p>座位通常很少，重點是坐下吃一點、感受氣氛。中洲、天神、長濱是主要區域；這趟只體驗一晚。</p></div><div><b>媽媽吃蔬菜</b><p>屋台可找炒蔬菜、煎蛋、天婦羅等，但湯底常含魚／肉；媽媽不是嚴格素食，所以不用為此綁死。</p></div></div>
-      <div class="links"><a target="_blank" href="https://www.gofukuoka.jp/en/articles/detail/ff5d9c6d-860e-4ec5-952f-366c1b2b60fe">福岡官方屋台指南</a><a target="_blank" href="https://rec-coffee.com/en/pages/coffee-shop-tenjin-one-fukuoka-building">REC COFFEE</a></div>
-    </div></details>
-  </article>
-</section>
-
-<section>
-  <h2>Day 5｜11/4（三）自然＋溫泉：整趟最放鬆的一天</h2>
-  <article class="day">
-    <div class="day-head">
-      <div class="day-photo"><img alt="那珂川清滝" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nakagawa%20Seiryu%2001.jpg"><div class="date">DAY 5 · ONSEN</div></div>
-      <div class="day-title"><span class="tag must">需預約家族湯</span><h3>中ノ島公園輕散步 → 那珂川清滝</h3><p>不租車、不登山攻頂。山林走 60–75 分鐘，再把下午留給真正的泡湯與休息。</p></div>
-    </div>
-    <div class="timeline">
-      <div class="slot"><div class="time">09:15</div><div><strong>天神出發</strong>西鐵福岡（天神）→ 大橋站。</div></div>
-      <div class="slot"><div class="time">09:45–10:15</div><div><strong>大橋站叫 GO Taxi → 中ノ島公園</strong>不要期待山區路邊攔空車。</div></div>
-      <div class="slot"><div class="time">10:15–11:30</div><div><strong>河邊／森林輕散步</strong>60–75 分鐘即可；<div class="optional">（如果下雨：完全取消散步，直接去清滝，行程照樣成立。）</div></div></div>
-      <div class="slot"><div class="time">11:30</div><div><strong>叫車 → 那珂川清滝</strong>抵達後先在館內吃午餐，放慢節奏。</div></div>
-      <div class="slot"><div class="time">13:00–13:50</div><div><strong>爸媽：私人家族湯｜你：女大浴場</strong>家族湯平日 50 分鐘；只使用家族湯不需另付大浴場入館費。</div></div>
-      <div class="slot"><div class="time">13:50–15:00</div><div><strong>泡完坐著休息</strong>喝水、牛奶／飲料、不要急著趕車。</div></div>
-      <div class="slot"><div class="time">15:00+</div><div><strong>免費巡迴巴士 → 大橋站 → 天神</strong>正式班次 10 月底再核對；官方有大橋站往返的免費接駁。</div></div>
-      <div class="slot"><div class="time">17:00+</div><div><strong>自由時間：最後採買＋整理行李</strong>今晚優先藥妝、Don Quijote、百貨地下食品與伴手禮。</div></div>
-    </div>
-    <details open><summary>溫泉執行細節（重要）</summary><div class="detail-body">
-      <p><b>10/20 要做：</b>官方自 2026 年 7 月起，下一個月的家族湯每月 20 日開放預約。鎖定 11/4 約 13:00，爸媽兩位使用。家族湯規定成人至少 2 人，因此你自己不適合另開一間；你去女大浴場反而最好。</p>
-      <p><b>目前一般平日價：</b>家族湯 ¥3,500 / 50 分鐘 / 一室；一般大浴場成人 ¥1,400。</p>
-      <div class="links"><a target="_blank" href="https://www.nakagawaseiryu.jp/">清滝官方</a><a target="_blank" href="https://www.nakagawaseiryu.jp/price.html">費用／規則</a><a target="_blank" href="https://www.nakagawaseiryu.jp/access.html">接駁／交通</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Nakanoshima+Park+Nakagawa+Fukuoka">中ノ島公園地圖</a></div>
-    </div></details>
-  </article>
-</section>
-
-<section>
-  <h2>Day 6｜11/5（四）最後半天＋回台灣</h2>
-  <article class="day">
-    <div class="day-head">
-      <div class="day-photo" style="background:linear-gradient(135deg,#efe6d7,#dfe8e4)"><div class="date">DAY 6 · HOME</div></div>
-      <div class="day-title"><span class="tag rest">不要塞遠景點</span><h3>慢早餐・最後採買・福岡機場</h3><p>下午 17:00 的班機，早上保留給睡飽與最後補貨。</p></div>
-    </div>
-    <div class="timeline">
-      <div class="slot"><div class="time">08:30–10:30</div><div><strong>慢早餐＋行李整理</strong>確認托運重量，液體全部進托運。</div></div>
-      <div class="slot"><div class="time">11:00</div><div><strong>Check-out、寄放行李</strong>最後一小段購物／午餐。</div></div>
-      <div class="slot"><div class="time">11:15–12:45</div><div><strong>最後午餐＋補貨</strong>百貨地下街或飯店附近即可。<div class="optional">（如果完全不缺東西：找一間早午餐／水果店坐久一點。）</div></div></div>
-      <div class="slot"><div class="time">13:15–13:30</div><div><strong>飯店拿行李 → Taxi 到 FUK 國際線</strong>三個人＋回程行李，不再拖著轉車。</div></div>
-      <div class="slot"><div class="time">17:00–18:30</div><div><strong>FUK → TPE</strong>抵達後入境、拿行李、機捷到高鐵桃園。</div></div>
-      <div class="slot"><div class="time">20:30–21:15</div><div><strong>桃園高鐵 → 左營</strong>回程高鐵不要訂太早，保留航班／入境延誤空間。</div></div>
-    </div>
-  </article>
-</section>
-
-<section>
-  <h2>自由時間：不知道要做什麼時，就從這裡選</h2>
-  <p class="lead">這一段是「慢活防無聊」用。主行程完成後才選，不需要全部去。</p>
+  <h2>晚上自由時間：去哪裡逛？</h2>
   <div class="shopping">
-    <div class="shop-card"><b>30–45 分鐘｜天神地下街</b><small>雨天最好用；藥妝、服飾、小店、甜點都有。走累隨時回飯店。</small></div>
-    <div class="shop-card"><b>45–90 分鐘｜ONE FUKUOKA BLDG + PARCO</b><small>新商場＋年輕品牌，適合 Day 3/4 下午或晚上。</small></div>
-    <div class="shop-card"><b>60–120 分鐘｜岩田屋・三越・大丸</b><small>化妝品、精品、食品地下街、伴手禮；媽媽想慢慢看東西時選這組。</small></div>
-    <div class="shop-card"><b>60–120 分鐘｜大名・今泉散步</b><small>選物、服飾、小型咖啡甜點店。比百貨更有街區感。</small></div>
-    <div class="shop-card"><b>90–150 分鐘｜中洲河畔＋Canal City</b><small>想換區域再去；若只是購物，沒有必要每天特地跑。</small></div>
-    <div class="shop-card"><b>最後一晚｜藥妝＋Don Quijote</b><small>把重的藥妝、零食集中最後買，避免前幾天一直提著走。</small></div>
+    <div class="shop-card"><b>天神地下街</b><small>天氣差也好逛；服飾、生活雜貨、甜點一次解決。</small></div>
+    <div class="shop-card"><b>岩田屋・福岡三越・大丸</b><small>百貨、化妝品、地下食品與伴手禮。</small></div>
+    <div class="shop-card"><b>大名・西通</b><small>年輕品牌、選物店、咖啡與小店，適合慢慢逛。</small></div>
+    <div class="shop-card"><b>Canal City</b><small>若住 Dormy Inn PREMIUM，這裡就是最省力的晚間備案。</small></div>
+    <div class="shop-card"><b>中洲屋台</b><small>當「體驗」而不是正式晚餐：點 1–2 樣、看河景就好。</small></div>
+    <div class="shop-card"><b>川端商店街</b><small>靠近 Canal City／祇園，適合不想跑遠的晚上。</small></div>
   </div>
 </section>
-
 <section>
-  <h2>吃喝清單：蔬菜多一點，但不把旅行變成「全素任務」</h2>
+  <h2>吃喝方向：蔬菜多一點、休息也要有旅行感</h2>
   <div class="food-grid">
-    <div class="food"><div class="where">11/1 八女</div><h3>八女茶＋和菓子</h3><p>這天的休息主角是玉露／煎茶，不排咖啡。找一間町家茶館坐 45–60 分鐘。</p></div>
-    <div class="food"><div class="where">11/2 天神晚餐</div><h3>梅之花 天神</h3><p>豆腐、湯葉為主，既有日本特色又很適合蔬菜偏好；特殊 vegetarian / vegan menu 要預約先說。</p></div>
-    <div class="food"><div class="where">11/3 午餐候選</div><h3>VEGETABLE LIFE CAFE</h3><p>蔬菜／vegan 選擇多，11:00–18:00，星期三休；所以放星期二剛好。</p></div>
-    <div class="food"><div class="where">11/3 14:15</div><h3>REC COFFEE · Tenjin One</h3><p>福岡本地 specialty coffee。咖啡就是下午休息，不排晚上。</p></div>
-    <div class="food"><div class="where">備用餐廳</div><h3>Plant-based Café NICE</h3><p>100% plant-based；星期一休。若 11/3 想吃得更清爽，可換這間。</p></div>
-    <div class="food"><div class="where">11/3 晚上</div><h3>屋台只「體驗」</h3><p>先正常吃晚餐，再去中洲／天神挑一攤吃 1–2 樣；不為名店排長隊。</p></div>
+    <div class="food"><div class="where">福岡市區</div><b>豆腐・湯葉料理</b>適合安排一次正式晚餐；對喜歡蔬菜、清爽口味的人很好。</div>
+    <div class="food"><div class="where">福岡市區</div><b>Vegan / plant-based</b>可穿插一餐 vegan ramen 或植物性 café，不必每餐都吃素。</div>
+    <div class="food"><div class="where">11/1 八女</div><b>八女茶＋和菓子</b>把下午茶留給當地玉露／煎茶，這天不用追咖啡。</div>
+    <div class="food"><div class="where">11/3 市區</div><b>REC COFFEE / MANU COFFEE</b>安排 14:30 左右，當走路中間的真正休息站。</div>
   </div>
 </section>
-
 <section>
-  <h2>代辦事項｜這份就是執行清單</h2>
-  <p class="lead">勾選狀態會存在你的瀏覽器裡。換手機／換瀏覽器不會同步，所以重要訂單仍請存 Email / Wallet。</p>
+  <h2>執行版 Checklist</h2>
   <div class="checklist">
-    <div class="todo-group">
-      <h3>現在就做</h3>
-      <div class="todo"><input type="checkbox" id="t1"><label for="t1"><b>確認三人 AirAsia 已付款並收到訂位代碼</b><br>姓名完全依護照；去回程若是 separate tickets，各自確認一個 PNR。</label></div>
-      <div class="todo"><input type="checkbox" id="t2"><label for="t2"><b>加托運行李</b><br>三人建議先抓去程約 30kg、回程約 40kg；若三人都是輕裝，可降成 25/30kg。不要另外買多餘 7kg cabin，除非真的需要。</label></div>
-      <div class="todo"><input type="checkbox" id="t3"><label for="t3"><b>訂天神飯店兩間房（可取消）</b><br>爸媽 Twin/Double＋你 Single/Double；備註 same floor / close rooms。兩間合計目標 CAD 300–400 / 晚。</label></div>
-      <div class="todo"><input type="checkbox" id="t4"><label for="t4"><b>護照＋旅遊保險</b><br>確認三人護照效期、日本入境條件；</label></div>
+    <div class="todo-group"><h3>已完成／近期</h3>
+      <div class="todo"><input type="checkbox" checked id="t1"><label for="t1"><b>機票已訂</b>：10/31 AK1510、11/5 AK1511，Trip.com，三人，含托運與選位。</label></div>
+      <div class="todo"><input type="checkbox" id="t2"><label for="t2"><b>住宿</b>：先查 Dormy Inn PREMIUM Canal City 前＋Dormy Inn 博多祇園，兩間房 CAD 300–400/晚總預算，優先可免費取消。</label></div>
+      <div class="todo"><input type="checkbox" id="t3"><label for="t3"><b>住宿補助</b>：福岡正式公布可用方案後，再決定是否重訂。</label></div>
+      <div class="todo"><input type="checkbox" id="t4"><label for="t4"><b>去程高鐵</b>：左營 → 桃園，抓能讓 08:30–09:00 到 T1 的班次。</label></div>
+      <div class="todo"><input type="checkbox" id="t5"><label for="t5"><b>回程高鐵</b>：桃園 → 左營，抓 20:00 後、留入境與行李 buffer。</label></div>
     </div>
-    <div class="todo-group">
-      <h3>10 月按日期做</h3>
-      <div class="todo"><input type="checkbox" id="t5"><label for="t5"><b>約 10/3：買 10/31 左營→桃園高鐵</b><br>高鐵一般可預訂 29 天內車票；目標 07:00–07:30 左營出發，看到早鳥就鎖。</label></div>
-      <div class="todo"><input type="checkbox" id="t6"><label for="t6"><b>約 10/8：買 11/5 桃園→左營高鐵</b><br>抓桃園站 20:30–21:15 左右，不要壓到 19 點多。</label></div>
-      <div class="todo"><input type="checkbox" id="t7"><label for="t7"><b>10/20：搶 11/4 那珂川清滝家族湯</b><br>目標 13:00 左右，爸媽兩人一室；選檜／巨岩等房型依當天有位為準。</label></div>
-      <div class="todo"><input type="checkbox" id="t8"><label for="t8"><b>出發前 1 週：重新核對交通</b><br>八女巴士、清滝免費接駁、AirAsia 航班、天氣與營業日。</label></div>
-    </div>
-    <div class="todo-group">
-      <h3>出發前 3–7 天</h3>
-      <div class="todo"><input type="checkbox" id="t9"><label for="t9"><b>裝好 GO Taxi＋付款方式</b><br>Day 5 山區移動用叫車，不靠路邊攔車。</label></div>
-      <div class="todo"><input type="checkbox" id="t10"><label for="t10"><b>eSIM / 網路＋Google Maps</b><br>至少你的手機一定要能穩定上網。</label></div>
-      <div class="todo"><input type="checkbox" id="t11"><label for="t11"><b>Visit Japan Web</b><br>三人資料確認完成，截圖／QR code 準備好。</label></div>
-      <div class="todo"><input type="checkbox" id="t12"><label for="t12"><b>預約梅之花（如果決定吃）</b><br>若只是一般豆腐湯葉料理，預約是為了不用等；若要 vegan/vegetarian menu，預約時一定先告知。</label></div>
-    </div>
-    <div class="todo-group">
-      <h3>前一晚／當天</h3>
-      <div class="todo"><input type="checkbox" id="t13"><label for="t13"><b>AirAsia check-in＋行李秤重</b><br>液體、剪刀等進托運；確認行動電源規則與登機行李重量。</label></div>
-      <div class="todo"><input type="checkbox" id="t14"><label for="t14"><b>下載所有訂單離線版</b><br>機票、飯店、高鐵、清滝預約、旅遊保險。</label></div>
-      <div class="todo"><input type="checkbox" id="t15"><label for="t15"><b>看 11/4 山區天氣</b><br>下雨就取消中ノ島散步，直接清滝午餐＋泡湯。</label></div>
+    <div class="todo-group"><h3>出發前 1–2 週</h3>
+      <div class="todo"><input type="checkbox" id="t6"><label for="t6"><b>那珂川清滝</b>：訂爸媽家族湯，確認接駁車時刻。</label></div>
+      <div class="todo"><input type="checkbox" id="t7"><label for="t7"><b>GO Taxi</b>：安裝、綁信用卡；確認中ノ島公園區域可叫車。</label></div>
+      <div class="todo"><input type="checkbox" id="t8"><label for="t8"><b>八女交通</b>：確認西鐵久留米 → 八女福島最新巴士班表。</label></div>
+      <div class="todo"><input type="checkbox" id="t9"><label for="t9"><b>Visit Japan Web</b>：三人入境資料。</label></div>
+      <div class="todo"><input type="checkbox" id="t10"><label for="t10"><b>網路／IC 卡</b>：eSIM、Suica/SUGOCA 等交通卡準備。</label></div>
+      <div class="todo"><input type="checkbox" id="t11"><label for="t11"><b>最後天氣檢查</b>：11/4 若下雨就取消溪谷散步，只保留午餐＋泡湯。</label></div>
     </div>
   </div>
 </section>
-
-<section>
-  <h2>快速連結</h2>
-  <div class="grid">
-    <div class="card"><h3>交通</h3><div class="links"><a href="https://www.thsrc.com.tw/" target="_blank">台灣高鐵</a><a href="https://www.google.com/maps" target="_blank">Google Maps</a><a href="https://go.goinc.jp/" target="_blank">GO Taxi</a></div></div>
-    <div class="card"><h3>景點</h3><div class="links"><a href="https://www.dazaifutenmangu.or.jp/en/" target="_blank">太宰府</a><a href="https://en.yame.travel/" target="_blank">Visit Yame</a><a href="https://www.nakagawaseiryu.jp/" target="_blank">那珂川清滝</a></div></div>
-    <div class="card"><h3>福岡官方</h3><div class="links"><a href="https://www.gofukuoka.jp/en/" target="_blank">Fukuoka City Guide</a><a href="https://www.gofukuoka.jp/en/articles/detail/ff5d9c6d-860e-4ec5-952f-366c1b2b60fe" target="_blank">屋台指南</a></div></div>
-  </div>
-</section>
-
-<section class="sources">
-  <h2>資料依據與提醒</h2>
-  <ul>
-    <li>住宿：Tokyu Stay 官方列房內洗脫烘／微波爐等設備；Hotel Oriental Express 官方列天神站西口步行約 1 分鐘；The Gate Hotel 官方列天神站 5 號出口直結、步行約 1 分鐘。</li>
-    <li>八女：八女市官方說明白壁町家約有 130 棟傳統建築，沿街仍有茶舖、味噌、和菓子與傳統工藝店。</li>
-    <li>大濠日本庭園：10–4 月 09:00–17:00；星期一休（星期一若為國定假日則翌日休）。</li>
-    <li>那珂川清滝：現行平日一般入館 ¥1,400；家族湯 ¥3,500 / 50 分鐘 / 一室。只用家族湯不需入館費，但若要再用大浴場需另付入館費；家族湯不可單人使用。每週四休館。下一月預約自每月 20 日開放。</li>
-    <li>高鐵：一般對號座可預訂 29 天內（含乘車當日）的車票；特殊疏運期以高鐵公告為準。</li>
-    <li>營業時間、票價、班表都有可能在 11 月前調整，所以已把「出發前一週再核對」列入待辦。</li>
-  </ul>
-  <div class="photo-credit">照片授權：Dazaifu Tenmangu — Drivephotographer / CC0；Yame Fukushima — isoyan / CC BY-SA 3.0；Nakagawa Seiryu — STA3816 / CC BY-SA 4.0；Ohori Park — Hirho / CC BY 4.0。照片僅供行程理解。</div>
-</section>
-
-<footer>福岡慢活漫遊 · 執行版 v1 · 2026-09-13 整理</footer>
+<section><h2>雨天備案</h2><div class="grid"><div class="card"><h3>八女下雨</h3><p>保留老街核心＋工藝＋茶，把戶外步行縮短。</p></div><div class="card"><h3>太宰府下雨</h3><p>天滿宮＋參道照走，下午提早回福岡百貨／地下街。</p></div><div class="card"><h3>11/4 下雨</h3><p>直接取消中ノ島公園，只去那珂川清滝午餐＋泡湯。</p></div></div></section>
+<footer>福岡慢活漫遊 · 2026/10/31–11/5｜執行版最後更新：2026/09/15</footer>
 </main>
 <script>
-(function(){
-  const boxes=[...document.querySelectorAll('.todo input[type=checkbox]')];
-  boxes.forEach(b=>{
-    const k='fukuoka2026_'+b.id;
-    b.checked=localStorage.getItem(k)==='1';
-    b.addEventListener('change',()=>localStorage.setItem(k,b.checked?'1':'0'));
-  });
-})();
+document.querySelectorAll('.todo input').forEach((c)=>{const k='fukuoka-'+c.id;c.checked=localStorage.getItem(k)==='1'||c.checked;c.addEventListener('change',()=>localStorage.setItem(k,c.checked?'1':'0'))})
 </script>
 </body>
 </html>
