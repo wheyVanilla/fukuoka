@@ -6,146 +6,163 @@
 <title>福岡慢活漫遊｜交通實戰手冊</title>
 <style>
 :root{--paper:#fbf8f2;--ink:#2e2a26;--muted:#746d66;--line:#e6ddd1;--sage:#667866;--sage2:#eaf0e7;--tea:#986643;--gold:#c49a50;--blue:#5a7288;--blue2:#edf2f5;--card:#fffdf9;--shadow:0 12px 32px rgba(55,43,29,.08)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.72}
-a{color:#356073;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:980px;margin:auto;padding:24px 18px 70px}.hero{background:linear-gradient(135deg,#f1eadf,#e6eee5);border:1px solid var(--line);border-radius:26px;padding:30px;box-shadow:var(--shadow)}h1{font-size:clamp(34px,6vw,54px);line-height:1.08;margin:5px 0 12px}h2{font-size:27px;margin:0 0 10px}h3{font-size:19px;margin:15px 0 5px}.muted{color:var(--muted)}.nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.pill{background:#fffaf3;border:1px solid #e3d7c8;border-radius:999px;padding:7px 11px;font-size:13px;font-weight:700}.day{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:24px;box-shadow:0 7px 20px rgba(61,47,33,.045)}.leg{border-top:1px solid var(--line);padding:13px 0}.leg:first-of-type{border-top:0}.route{font-weight:800}.meta{margin-top:5px;background:var(--blue2);padding:9px 11px;border-radius:10px;font-size:14px}.fare{margin-top:6px;background:#fff7e9;padding:9px 11px;border-radius:10px;font-size:14px}.decision{margin-top:6px;background:var(--sage2);padding:9px 11px;border-radius:10px;font-size:14px}.warn{margin-top:8px;background:#fff0e7;border-left:5px solid #c87854;padding:10px 12px;border-radius:10px}.addr{margin-top:8px;background:#f7f3ed;padding:10px 12px;border-radius:10px;font-size:13px;word-break:break-all}.btns{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.btn,.copy{border:1px solid #cbd6dc;background:#fff;border-radius:10px;padding:7px 10px;font-size:12px;font-weight:750;color:#356073;cursor:pointer}.copy{color:#5d4f6c;border-color:#d6cde1}.tablewrap{overflow-x:auto}.summary{width:100%;border-collapse:collapse;background:white;border-radius:14px;overflow:hidden}.summary th,.summary td{border-bottom:1px solid var(--line);padding:10px 11px;text-align:left;vertical-align:top;font-size:13px}.summary th{background:#f6f0e8}.source{font-size:12px;color:var(--muted);margin-top:8px}.back{display:inline-block;margin-bottom:14px;font-weight:800}.check{font-weight:800;color:#49634d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.68}
+a{color:#356073;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1000px;margin:auto;padding:24px 18px 70px}.hero{background:linear-gradient(135deg,#f1eadf,#e6eee5);border:1px solid var(--line);border-radius:26px;padding:30px;box-shadow:var(--shadow)}h1{font-size:clamp(34px,6vw,54px);line-height:1.08;margin:5px 0 12px}h2{font-size:27px;margin:0 0 10px}h3{font-size:19px;margin:15px 0 5px}.muted{color:var(--muted)}.nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.pill,.status{background:#fffaf3;border:1px solid #e3d7c8;border-radius:999px;padding:7px 11px;font-size:13px;font-weight:700}.status{display:inline-block;padding:4px 8px;font-size:11px;margin-bottom:8px}.locked{background:#e6f1e4;border-color:#c8ddc5;color:#466247}.verify{background:#fff2cf;border-color:#e8d391;color:#795e1c}.day{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:24px;box-shadow:0 7px 20px rgba(61,47,33,.045)}.step{border-top:1px solid var(--line);padding:14px 0}.step:first-of-type{border-top:0}.route{font-weight:850;font-size:16px}.do{margin-top:7px;background:#edf4f6;padding:10px 12px;border-radius:10px}.fare{margin-top:7px;background:#fff7e9;padding:10px 12px;border-radius:10px}.decision{margin-top:7px;background:var(--sage2);padding:10px 12px;border-radius:10px}.backup{margin-top:7px;background:#f4f0fa;padding:10px 12px;border-radius:10px}.warn{margin-top:8px;background:#fff0e7;border-left:5px solid #c87854;padding:10px 12px;border-radius:10px}.dont{margin-top:7px;background:#fbeaea;padding:10px 12px;border-radius:10px}.addr{margin-top:8px;background:#f7f3ed;padding:10px 12px;border-radius:10px;font-size:13px;word-break:break-all}.btns{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.btn,.copy{border:1px solid #cbd6dc;background:#fff;border-radius:10px;padding:7px 10px;font-size:12px;font-weight:750;color:#356073;cursor:pointer}.copy{color:#5d4f6c;border-color:#d6cde1}.tablewrap{overflow-x:auto}.summary{width:100%;border-collapse:collapse;background:white;border-radius:14px;overflow:hidden}.summary th,.summary td{border-bottom:1px solid var(--line);padding:10px 11px;text-align:left;vertical-align:top;font-size:13px}.summary th{background:#f6f0e8}.source{font-size:12px;color:var(--muted);margin-top:8px}.back{display:inline-block;margin-bottom:14px;font-weight:800}.script{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f4f4f4;padding:8px 10px;border-radius:8px;margin-top:7px;font-size:13px}.cost{font-weight:850}.mini{font-size:12px;color:var(--muted)}@media(max-width:700px){.summary{min-width:720px}}
 </style>
 <script>
-function cp(t,b){navigator.clipboard.writeText(t); const old=b.textContent; b.textContent='已複製 ✓'; setTimeout(()=>b.textContent=old,1200);}
+function cp(t,b){navigator.clipboard.writeText(t);const x=b.textContent;b.textContent='已複製 ✓';setTimeout(()=>b.textContent=x,1200);}
 </script>
 </head>
 <body><main class="wrap">
 <a class="back" href="index.html">← 回六天行程</a>
 <section class="hero">
-<div class="muted">2026/10/31–11/5 · 3 adults</div>
+<div class="muted">2026/10/31–11/5 · 3 adults · IKEA manual mode</div>
 <h1>交通實戰手冊</h1>
-<p>目標：到現場不用重新研究。每段都寫清楚「哪裡上、哪裡下、怎麼付、要不要買 Pass、Taxi 備援地址」。Google Maps 不放死截圖，改用即時路線連結，因為步行入口與大眾運輸路線可能臨時調整。</p>
-<div class="nav"><a class="pill" href="#d1">10/31 機場</a><a class="pill" href="#d2">11/1 八女</a><a class="pill" href="#d3">11/2 太宰府</a><a class="pill" href="#d4">11/3 下關・門司港</a><a class="pill" href="#d5">11/4 清滝</a><a class="pill" href="#d6">11/5 大濠・機場</a><a class="pill" href="#passes">票券總表</a></div>
+<p><b>用法：</b>每天照 Step 1 → Step 2 做。綠色「已鎖定」代表官方現行資料已足夠；黃色「出發前再鎖」代表 2026/10 班次改正或動態運價仍可能變。沒有可靠固定 Taxi 價的地方不亂估，直接用 GO 當下報價。</p>
+<div class="nav"><a class="pill" href="#quick">每日總表</a><a class="pill" href="#d1">10/31 機場</a><a class="pill" href="#d2">11/1 八女</a><a class="pill" href="#d3">11/2 太宰府</a><a class="pill" href="#d4">11/3 下關</a><a class="pill" href="#d5">11/4 輕健行＋清滝</a><a class="pill" href="#d6">11/5 大濠＋機場</a></div>
 </section>
 
-<section class="day" id="passes"><h2>先看結論｜每天買什麼</h2>
-<div class="tablewrap"><table class="summary"><thead><tr><th>日期</th><th>主方式</th><th>票券結論</th><th>已確認成本</th></tr></thead><tbody>
-<tr><td>10/31</td><td>Airport Express</td><td><b>Suica 單刷</b>，不買 Pass</td><td>¥480／人</td></tr>
-<tr><td>11/1</td><td>西鐵＋西鐵巴士</td><td><b>Suica 單買較划算</b>；FUKUOKA 1DAY PASS ¥2,980 不值得；久留米 City Pass 的巴士範圍是久留米區，不拿來當八女票</td><td>西鐵往返 ¥1,440＋八女巴士實刷；即使巴士每段以「到八女営業所」上限 ¥600 計，仍 ≤¥2,640／人</td></tr>
-<tr><td>11/2</td><td>西鐵＋まほろば号</td><td><b>Suica 單買</b>，不買柳川套票／1DAY PASS</td><td>西鐵往返 ¥960＋まほろば号往返 ¥200＝¥1,160／人</td></tr>
-<tr><td>11/3</td><td>JR 特急＋JR普通＋巴士＋船</td><td><b>JR KYUSHU MOBILE PASS FUKUOKA WIDE 2日券 ¥3,500</b>；11/3 啟用</td><td>Pass ¥3,500＋門司→下關 ¥270＋巴士 ¥260＋船 ¥400＝約 ¥4,430／人</td></tr>
-<tr><td>11/4</td><td>西鐵＋清滝免費接駁</td><td><b>Suica 單買</b></td><td>西鐵天神↔大橋 ¥480／人；接駁免費</td></tr>
-<tr><td>11/5</td><td>地下鐵＋Airport Express</td><td><b>Suica 單買</b>；地下鐵一日券不值得</td><td>天神↔大濠 ¥420＋機場巴士 ¥480＝¥900／人</td></tr>
+<section class="day" id="quick"><h2>先看這張｜每天怎麼付</h2>
+<div class="tablewrap"><table class="summary"><thead><tr><th>日期</th><th>交通</th><th>付款方式</th><th>已知每人</th><th>三人</th></tr></thead><tbody>
+<tr><td>10/31</td><td>Airport Express</td><td>Suica</td><td>¥480</td><td>¥1,440</td></tr>
+<tr><td>11/1</td><td>西鐵＋八女巴士</td><td>Suica 單買</td><td>西鐵往返 ¥1,440＋巴士實刷</td><td>×3</td></tr>
+<tr><td>11/2</td><td>西鐵＋まほろば号</td><td>Suica</td><td>¥1,160</td><td>¥3,480</td></tr>
+<tr><td>11/3</td><td>JR＋巴士＋船</td><td>FUKUOKA WIDE Mobile Pass＋補票＋Suica／船票</td><td>約 ¥4,430</td><td>約 ¥13,290</td></tr>
+<tr><td>11/4</td><td>西鐵＋免費接駁＋Taxi×2</td><td>Suica＋GO／Taxi</td><td>西鐵 ¥480＋Taxi 當下報價</td><td>公共交通 ¥1,440＋Taxi</td></tr>
+<tr><td>11/5</td><td>地下鐵＋Airport Express</td><td>Suica</td><td>¥900</td><td>¥2,700</td></tr>
 </tbody></table></div>
-<div class="warn"><b>11/3 重要修正：</b>2026/7/1 起博多～門司港「2枚きっぷ」已調漲為 ¥4,200，不是舊價 ¥3,620；因此 FUKUOKA WIDE Mobile Pass ¥3,500 更有優勢。Mobile Pass 不含山陽新幹線、巴士、渡船，也不含門司以外到下關的區間。</div>
+<div class="warn"><b>Pass 結論：</b>只有 11/3 值得買 FUKUOKA WIDE Mobile Pass。其他天直接 Suica 比較簡單且便宜。11/1 的八女巴士精確票價與 11/1 當日班次，因西鐵已公告 2026/10 有巴士改點，等 10 月新版完全生效後再做最後鎖定。</div>
 </section>
 
-<section class="day" id="d1"><h2>Day 1｜10/31（六）福岡機場 → 飯店</h2>
-<div class="decision"><b>主方案：Airport Express 大巴。</b>你記得沒錯，這比三人拖行李轉地鐵更直接，而且價格很低。</div>
-<div class="leg"><div class="route">① 福岡空港 國際線 → 西鉄天神高速バスターミナル</div>
-<div class="meta">上車：<b>福岡空港 國際線 1F・8番のりば</b><br>下車：<b>西鉄天神高速バスターミナル</b><br>中途不停站，約 30–40 分。</div>
-<div class="fare">Suica：<b>¥480／人</b>（現金 ¥500）。此路線官方明載信用卡不可用。行李可放車底行李艙。</div>
-<div class="meta"><b>10/31 星期六建議：</b>航班 15:20 落地。<br>主抓 <b>16:45</b>；若入境非常順可搭 16:15；Backup 17:25。不要為了趕 16:15 壓縮入境。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=福岡空港+国際線旅客ターミナル&destination=西鉄天神高速バスターミナル&travelmode=transit">Google Maps 路線</a><a class="btn" target="_blank" rel="noopener" href="https://www.nishitetsu.jp/bus/rosen/airportexpress/">西鐵官方 Airport Express</a></div></div>
-<div class="leg"><div class="route">② 天神高速巴士總站 → Tokyu Stay Fukuoka Tenjin</div>
-<div class="meta">步行約 10 分鐘級；有行李但路程可接受。</div>
-<div class="addr"><b>飯店地址：</b>〒810-0003 福岡県福岡市中央区春吉3-21-24 東急ステイ福岡天神</div>
-<div class="btns"><button class="copy" onclick="cp('〒810-0003 福岡県福岡市中央区春吉3-21-24 東急ステイ福岡天神',this)">複製飯店地址</button><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=西鉄天神高速バスターミナル&destination=東急ステイ福岡天神&travelmode=walking">步行 Maps</a></div></div>
-<div class="warn"><b>Taxi Backup：</b>只有大巴剛走、等待太久或行李狀況不適合時再搭。官方飯店只提供「機場約 5 km／車程約 15 分」等資訊，沒有固定 Taxi 價；所以這份手冊不亂填金額，直接以 GO app 當下報價為準。</div>
+<section class="day" id="d1"><span class="status locked">已鎖定</span><h2>Day 1｜10/31（六）福岡空港 → 飯店</h2>
+<div class="step"><div class="route">Step 1｜下飛機後，不去 Domestic Terminal</div>
+<div class="do">完成入境、拿行李後留在 <b>福岡空港 國際線 1F</b>。找巴士圖示與 <b>8番のりば</b>。</div>
+<div class="dont"><b>不要：</b>為了搭地下鐵先坐接駁車去國內線。你們三人有行李，Airport Express 直接到天神更省事。</div></div>
+<div class="step"><div class="route">Step 2｜搭 Airport Express 到天神</div>
+<div class="do">上車：<b>福岡空港 国際線 1F・8番のりば</b><br>下車：<b>西鉄天神高速バスターミナル</b><br>中途不停站。官方現行時刻／票價基準為 2026/4/1。</div>
+<div class="fare"><b>付款：</b>Suica ¥480／人；現金 ¥500。交通系 IC 有 ¥20 折扣。信用卡不可用。行李自己放車底行李艙。</div>
+<div class="backup"><b>航班 15:20 抵達：</b>把 16:45 當舒適目標；16:15 只有入境很快才搭；錯過就搭後續班次，不必急。</div>
+<div class="btns"><a class="btn" href="https://www.nishitetsu.jp/bus/rosen/airportexpress/" target="_blank" rel="noopener">官方 Airport Express</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=福岡空港+国際線旅客ターミナル&destination=西鉄天神高速バスターミナル&travelmode=transit" target="_blank" rel="noopener">Maps</a></div></div>
+<div class="step"><div class="route">Step 3｜天神巴士總站 → 飯店</div>
+<div class="do">下車後步行約 10 分鐘級到 Tokyu Stay。若下雨或爸媽不想拖行李走，這一小段再叫 Taxi。</div>
+<div class="addr"><b>目的地：</b>〒810-0003 福岡県福岡市中央区春吉3-21-24 東急ステイ福岡天神</div>
+<div class="btns"><button class="copy" onclick="cp('〒810-0003 福岡県福岡市中央区春吉3-21-24 東急ステイ福岡天神',this)">複製地址</button><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=西鉄天神高速バスターミナル&destination=東急ステイ福岡天神&travelmode=walking" target="_blank" rel="noopener">步行 Maps</a></div></div>
 </section>
 
-<section class="day" id="d2"><h2>Day 2｜11/1（日）八女</h2>
-<div class="decision"><b>主方案：西鐵福岡（天神）→ 西鐵久留米 → 西鐵巴士 →「福島」下車。</b>全程 Suica 最簡單。</div>
-<div class="leg"><div class="route">① 飯店 → 西鉄福岡（天神）駅</div>
-<div class="meta">步行約 6–8 分鐘。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=東急ステイ福岡天神&destination=西鉄福岡（天神）駅&travelmode=walking">步行 Maps</a></div></div>
-<div class="leg"><div class="route">② 西鉄福岡（天神） → 西鉄久留米</div>
-<div class="meta">搭 <b>天神大牟田線 特急</b>（大牟田方向）。約 31–35 分；不需加特急費。</div>
-<div class="fare">¥720／人／單程，Suica。</div></div>
-<div class="leg"><div class="route">③ 西鉄久留米 → 福島（八女）</div>
-<div class="meta">在西鉄久留米巴士中心轉往八女方向的 <b>30／31／32 系統</b>（常見目的地「八女営業所」），約 35 分；在 <b>「福島」</b> 下車，不要坐到終點才下。</div>
-<div class="fare">可刷 Suica。官方八女市確認此路線；現行公開資料可確認到終點八女営業所為 ¥600，而福島在終點前。因官方搜尋頁目前沒有單獨穩定顯示福島的最新票價，本頁刻意不捏造精確數字，車上 IC 直接實刷。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=西鉄久留米駅&destination=福島バス停+八女市&travelmode=transit">Google Maps 即時轉乘</a><a class="btn" target="_blank" rel="noopener" href="https://jik.nishitetsu.jp/">西鐵即時時刻／運賃</a></div></div>
-<div class="leg"><div class="route">④ 福島 → 八女福島白壁街區</div>
-<div class="meta">下車後步行進老街；當天點與點多在 5–15 分鐘步行內。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=八女福島白壁の町並み">Google Maps</a></div></div>
-<div class="leg"><div class="route">⑤ 回程</div><div class="meta">回到 <b>福島</b>站 → 西鉄久留米 → 西鉄福岡（天神）。原路返回。</div></div>
-<div class="decision"><b>票券判斷：</b>FUKUOKA 1DAY PASS 現價 ¥2,980。光以「火車 ¥1,440＋巴士到八女営業所上限 ¥1,200」估，單買最多約 ¥2,640，已低於 Pass；而久留米 City Pass 的免費巴士是「久留米エリア」，不是為八女往返設計。因此 <b>Suica 單買</b>。</div>
+<section class="day" id="d2"><span class="status verify">10月新版後鎖班次</span><h2>Day 2｜11/1（日）八女</h2>
+<div class="decision"><b>最省腦方案：</b>全程 Suica。西鉄福岡（天神）→西鉄久留米→西鐵巴士 30/31/32 →「福島」下車。</div>
+<div class="step"><div class="route">Step 1｜飯店走到西鉄福岡（天神）駅</div>
+<div class="do">步行約 6–8 分鐘。進站後找 <b>天神大牟田線・大牟田方面</b>。</div><div class="btns"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=東急ステイ福岡天神&destination=西鉄福岡（天神）駅&travelmode=walking" target="_blank" rel="noopener">Maps</a></div></div>
+<div class="step"><div class="route">Step 2｜西鉄福岡（天神） → 西鉄久留米</div>
+<div class="do">優先搭 <b>特急</b>。西鐵的特急不需要另買特急券；直接 Suica 進出。</div>
+<div class="fare">現行運價：<b>¥720／人／單程</b>。</div></div>
+<div class="step"><div class="route">Step 3｜西鉄久留米 → 福島（八女）</div>
+<div class="do">出電車後去西鉄久留米巴士中心。找往 <b>八女営業所</b>方向的 <b>30／31／32</b>；其中 31 是主幹路線。<br>你們要在 <b>「福島」</b>下車，不是「福島高校前」，也不必坐到八女営業所。</div>
+<div class="fare">Suica 可用。現行公開資料顯示西鉄久留米→八女営業所全程 ¥600；「福島」在終點前，所以實際會低於或等於 ¥600。因 2026/10 有西鐵巴士改點，精確福島票價等新版完全生效後再鎖，不放假精準數字。</div>
+<div class="backup"><b>現場判斷：</b>看電子看板／司機前方顯示有「福島・八女営業所」即可。30、31、32 都可以，不必死等某一號。</div>
+<div class="btns"><a class="btn" href="https://jik.nishitetsu.jp/" target="_blank" rel="noopener">西鐵官方時刻／運賃</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=西鉄久留米駅&destination=福島バス停+八女市&travelmode=transit" target="_blank" rel="noopener">Maps 即時轉乘</a></div></div>
+<div class="step"><div class="route">Step 4｜福島 → 白壁老街</div><div class="do">下車後照 Maps 步行進八女福島町並區；景點之間以步行為主。</div><div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=八女福島白壁の町並み" target="_blank" rel="noopener">八女福島 Maps</a></div></div>
+<div class="step"><div class="route">Step 5｜回程：福島 → 西鉄久留米 → 西鉄福岡（天神）</div>
+<div class="do">回到去程下車點對向的 <b>福島</b>站牌，搭 30／31／32 往西鉄久留米／JR久留米方向；在 <b>西鉄久留米</b>下車，再搭特急回天神。</div>
+<div class="dont"><b>不要：</b>為了省幾十日圓去研究 FUKUOKA 1DAY PASS。西鐵往返 ¥1,440，加上八女巴士往返仍低於 ¥2,980 Pass 的門檻。</div></div>
 </section>
 
-<section class="day" id="d3"><h2>Day 3｜11/2（一）太宰府＋竈門神社</h2>
-<div class="leg"><div class="route">① 西鉄福岡（天神） → 西鉄二日市 → 太宰府</div>
-<div class="meta">西鉄天神大牟田線 → <b>西鉄二日市</b>轉太宰府線 → <b>太宰府駅</b>。約 25–35 分。</div>
-<div class="fare">¥480／人／單程；往返 ¥960。Suica。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=西鉄福岡（天神）駅&destination=太宰府駅&travelmode=transit">Google Maps</a></div></div>
-<div class="leg"><div class="route">② 太宰府駅 → 天滿宮／參道</div><div class="meta">步行約 5 分鐘。午餐與 cafe 都在這一帶，不另搭車。</div></div>
-<div class="leg"><div class="route">③ 太宰府 → 竈門神社（11/2 星期一＝平日表）</div>
-<div class="meta">上車：<b>西鉄太宰府駅</b>。下車：<b>内山（竈門神社前）</b>。<br><b>主方案：13:52 → 14:00</b><br>Backup：14:22 → 14:30</div>
-<div class="fare">まほろば号全區間 ¥100；Suica 可用。</div></div>
-<div class="leg"><div class="route">④ 竈門神社 → 太宰府駅</div>
-<div class="meta">上車：<b>内山（竈門神社前）</b>。下車：<b>西鉄太宰府駅</b>。<br><b>主方案：15:10 → 15:19</b><br>Backup：15:40 → 15:49</div></div>
-<div class="addr"><b>Taxi Backup 目的地：</b>〒818-0115 福岡県太宰府市内山883 宝満宮竈門神社</div>
-<div class="btns"><button class="copy" onclick="cp('〒818-0115 福岡県太宰府市内山883 宝満宮竈門神社',this)">複製竈門神社地址</button><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=宝満宮竈門神社">Google Maps</a></div>
-<div class="warn">Taxi 無官方固定價，因此不寫假精準金額；等不到巴士時，用 GO app 先看即時報價再決定。步行約 40 分且上坡，不建議。</div></div>
-<div class="decision"><b>票券判斷：</b>西鐵往返 ¥960＋まほろば号往返 ¥200＝¥1,160／人。遠低於 FUKUOKA 1DAY PASS；也沒有柳川行程，所以不買柳川＋太宰府套票。</div>
+<section class="day" id="d3"><span class="status locked">已鎖定</span><h2>Day 3｜11/2（一）太宰府＋竈門神社</h2>
+<div class="step"><div class="route">Step 1｜西鉄福岡（天神） → 太宰府</div>
+<div class="do">搭天神大牟田線 → <b>西鉄二日市</b>；下車後依「太宰府線」指標轉車 → <b>太宰府駅</b>。不需出站重買票。</div>
+<div class="fare">¥480／人／單程；Suica。往返 ¥960。</div><div class="btns"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=西鉄福岡（天神）駅&destination=太宰府駅&travelmode=transit" target="_blank" rel="noopener">Maps</a></div></div>
+<div class="step"><div class="route">Step 2｜太宰府駅 → 天滿宮／午餐／茶</div><div class="do">出站後沿參道步行約 5 分。上午到午餐後所有點都步行處理。</div></div>
+<div class="step"><div class="route">Step 3｜西鉄太宰府駅 → 内山（竈門神社前）</div>
+<div class="do"><b>11/2 是星期一，用平日時刻表。</b><br>主方案：<b>13:52 → 14:00</b><br>Backup：<b>14:22 → 14:30</b></div>
+<div class="fare">まほろば号：¥100／人；交通系 IC 可用。</div></div>
+<div class="step"><div class="route">Step 4｜内山 → 西鉄太宰府駅</div>
+<div class="do">主方案：<b>15:10 → 15:19</b><br>Backup：<b>15:40 → 15:49</b></div>
+<div class="addr"><b>等不到巴士時 Taxi 目的地：</b>〒818-0115 福岡県太宰府市内山883 宝満宮竈門神社</div>
+<div class="btns"><button class="copy" onclick="cp('〒818-0115 福岡県太宰府市内山883 宝満宮竈門神社',this)">複製地址</button><a class="btn" href="https://www.google.com/maps/search/?api=1&query=宝満宮竈門神社" target="_blank" rel="noopener">Maps</a></div>
+<div class="dont"><b>不要：</b>從太宰府硬走上去。官方約 40 分鐘步行且有坡；這趟是陪爸媽旅行，不值得。</div></div>
+<div class="step"><div class="route">Step 5｜太宰府 → 天神</div><div class="do">原路：太宰府線 → 西鉄二日市 → 天神大牟田線 → 西鉄福岡（天神）。Suica。</div></div>
+<div class="decision"><b>今日成本：</b>¥960 西鐵＋¥200 まほろば号＝<b>¥1,160／人</b>。不買柳川＋太宰府套票，也不買 1DAY Pass。</div>
 </section>
 
-<section class="day" id="d4"><h2>Day 4｜11/3（二・文化日）下關＋門司港</h2>
-<div class="decision"><b>買：JR KYUSHU MOBILE PASS「FUKUOKA WIDE」2日券 ¥3,500／人。</b>從 11/3 啟用；只搭 JR 九州特急自由席／普通快速，不搭博多～小倉山陽新幹線。</div>
-<div class="leg"><div class="route">① 飯店 → 博多駅</div><div class="meta">為了最長移動日保留體力，建議 Taxi 或市區交通，不建議早上先走 1.9 km。</div>
-<div class="addr"><b>Taxi 目的地：</b>博多駅（JR Hakata Station）</div><div class="btns"><button class="copy" onclick="cp('博多駅',this)">複製</button><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=博多駅">Maps</a></div></div>
-<div class="leg"><div class="route">② 博多 → 小倉</div><div class="meta"><b>08:02 特急 Sonic 5 自由席 → 08:56 小倉</b>。Mobile Pass 直接涵蓋。</div></div>
-<div class="leg"><div class="route">③ 小倉 → 下関</div><div class="meta"><b>09:14 小倉 → 09:27 下関</b>（山陽本線方向）。Pass 在九州側適用；跨出適用區的 <b>門司→下関</b>另付。</div><div class="fare">門司→下関：<b>¥270／人</b>（2026 現行）。不用在門司下車。直接搭到下関站。FUKUOKA WIDE Mobile Pass 涵蓋至門司，門司→下関為超出範圍區間。抵達下関後走人工閘口，出示 Mobile Pass 並補付門司→下関車資。</div></div>
-<div class="leg"><div class="route">④ 下関駅 → 唐戸</div><div class="meta">下関駅前バスターミナル 1～4 號乘車處 → 搭最先發車且標示經「唐戸」的巴士：往唐戶方向，約 10 分。到 <b>唐戸</b> 下車。</div><div class="fare">¥260／人；Suica 可用。</div></div>
-<div class="leg"><div class="route">⑤ 唐戶市場 → 日清講和記念館／春帆樓／赤間神宮</div><div class="meta">全部步行。唐戶市場往東約 10 分鐘級；春帆樓、記念館、赤間神宮幾乎相鄰。</div><div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=唐戸市場&destination=日清講和記念館&travelmode=walking">步行 Maps</a></div></div>
-<div class="leg"><div class="route">⑥ 唐戸桟橋 → 門司港</div><div class="meta">關門汽船。主抓 <b>12:00</b>，Backup <b>12:20</b>；船程約 5 分。</div><div class="fare">¥400／人。</div></div>
-<div class="leg"><div class="route">⑦ 門司港 → 小倉 → 博多｜回程完整方案</div>
-<div class="meta"><b>主方案：16:42 門司港発 → 約16:56 小倉着 → 17:05 Sonic 42 自由席 → 約17:55 博多</b><br>
-第一段搭鹿兒島本線區間快速（往羽犬塚方向）；到小倉後轉 JR 九州特急 Sonic 42。JR 九州 2026年10月時刻表列出小倉 17:05 發 Sonic 42 往博多。</div>
-<div class="fare"><b>票價：</b>門司港→小倉→博多全段都在 FUKUOKA WIDE Mobile Pass 適用範圍內，而且 Sonic 搭自由席即可，<b>不用再付任何 JR 車資／特急費</b>。回程沒有像去下関那樣的跨區補票問題。</div>
-<div class="decision"><b>轉乘判斷：</b>16:42→小倉後接 17:05，預留約 9 分鐘。這個接法在時刻上成立，但 11/3 是文化日、人多；請一到小倉就直接跟「特急／Sonic／博多方面」指標走，不逛站內商店。</div>
-<div class="backup"><b>Backup A｜錯過 17:05：</b>16:59 門司港発快速 → 17:12 小倉着，等 <b>17:40 Sonic 44</b> 往博多。這個轉乘有約 28 分鐘，最穩。<br><b>Backup B｜不想再轉特急：</b>可留在往博多方向的快速／區間快速繼續搭，但時間較久；Mobile Pass 仍涵蓋。</div>
-<div class="why"><b>實戰：</b>門司港進站時出示 Mobile Pass；小倉轉 Sonic 42 自由席；博多出站再出示 Mobile Pass。全程不需刷 Suica，也不需另外買特急券。</div></div>
-<div class="fare"><b>每人交通核心成本：</b>¥3,500 Pass＋¥270 跨區 JR＋¥260 巴士＋¥400 船＝<b>約 ¥4,430</b>；三人約 <b>¥13,290</b>。</div>
-<div class="warn"><b>為什麼不用 2枚きっぷ：</b>2026/7/1 起博多～門司港 2枚きっぷ（自由席）已調為 ¥4,200／人；再加下關、巴士、船，會高於 Mobile Pass。舊資料寫 ¥3,620 已過期。</div>
+<section class="day" id="d4"><span class="status locked">已鎖定；出發前只查臨時運休</span><h2>Day 4｜11/3（二・文化日）下關＋門司港</h2>
+<div class="decision"><b>今天唯一要先買的 Pass：</b>JR KYUSHU MOBILE PASS「FUKUOKA WIDE」2日 ¥3,500／人。適用普通／快速＋特急自由席，包含門司港；<b>不含博多～小倉山陽新幹線</b>。</div>
+<div class="step"><div class="route">Step 1｜飯店 → 博多駅</div>
+<div class="do">最長移動日，不先走 1.9 km。優先 Taxi；若不用 Taxi 再搭市區交通。</div>
+<div class="addr"><b>Taxi：</b>博多駅（JR Hakata Station）</div><div class="btns"><button class="copy" onclick="cp('博多駅',this)">複製</button><a class="btn" href="https://www.google.com/maps/search/?api=1&query=博多駅" target="_blank" rel="noopener">Maps</a></div></div>
+<div class="step"><div class="route">Step 2｜博多 → 小倉｜Sonic</div>
+<div class="do">主方案：<b>08:02 特急 Sonic 5 自由席 → 08:56 小倉</b>。進站／出示方式依 Mobile Pass 指示；搭自由席，不另買特急券。</div>
+<div class="dont"><b>不要搭山陽新幹線。</b>Hakata–Kokura Shinkansen 不在這張 Mobile Pass 範圍內。</div></div>
+<div class="step"><div class="route">Step 3｜小倉 → 下関｜不要在門司下車</div>
+<div class="do"><b>09:14 小倉 → 09:27 下関</b>。直接坐到底。Mobile Pass 的有效範圍到門司，但你不需要為了補票在門司下車。</div>
+<div class="fare"><b>到下関怎麼做：</b>走人工閘口 → 出示 Mobile Pass → 說要補「門司から下関まで」→ 補付 <b>¥270／人</b>。</div>
+<div class="script">このパスで博多から来ました。門司から下関までの運賃を精算したいです。</div></div>
+<div class="step"><div class="route">Step 4｜下関駅 → 唐戸</div>
+<div class="do">到 <b>下関駅前バスターミナル</b>。找 <b>1～4 號乘車處</b>。搭最先發車、電子看板有 <b>「唐戸」</b> 的車即可；不用背特定 bus number。約 10 分，在 <b>唐戸</b>下車。</div>
+<div class="fare">¥260／人；Suica 可用。</div></div>
+<div class="step"><div class="route">Step 5｜唐戸市場 → 馬關條約歷史線</div>
+<div class="do">全程步行：唐戸市場 → 日清講和記念館 → 春帆樓 → 赤間神宮 → 唐戸桟橋。</div><div class="btns"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=唐戸市場&destination=日清講和記念館&travelmode=walking" target="_blank" rel="noopener">市場→記念館 Maps</a></div></div>
+<div class="step"><div class="route">Step 6｜唐戸桟橋 → 門司港</div>
+<div class="do">關門汽船。主抓 <b>12:00</b>；Backup <b>12:20</b>。船程約 5 分。</div><div class="fare">¥400／人。</div></div>
+<div class="step"><div class="route">Step 7｜門司港 → 小倉 → 博多｜回程完整操作</div>
+<div class="do"><b>主方案：</b>16:42 門司港 → 約 16:56 小倉；到小倉後直接跟 <b>「特急／Sonic／博多方面」</b>指標走，接 <b>17:05 Sonic 42 自由席 → 約17:55 博多</b>。</div>
+<div class="fare"><b>回程全部包含在 Mobile Pass。</b>門司港→小倉→博多不用補票、不刷 Suica、不另買特急券。</div>
+<div class="backup"><b>Backup A（最穩）：</b>16:59 門司港 → 17:12 小倉；17:40 Sonic 44 → 博多。轉乘約 28 分鐘。<br><b>Backup B：</b>若懶得轉特急，搭往博多方向的快速／區間快速，較慢但 Pass 仍涵蓋。</div>
+<div class="dont"><b>9 分鐘轉乘規則：</b>主方案能接，但文化日人多。到小倉不要逛便利店、不要出站；直接轉月台。</div></div>
+<div class="decision"><b>今日核心成本：</b>¥3,500 Pass＋¥270 跨區 JR＋¥260 巴士＋¥400 船＝<b>約 ¥4,430／人；三人約 ¥13,290</b>。2026/7/1 起博多～門司港 2枚きっぷ已漲到 ¥4,200，所以不選它。</div>
 </section>
 
-<section class="day" id="d5"><h2>Day 5｜11/4（三）那珂川清滝</h2>
-<div class="warn"><b>重要查證結果：</b>中ノ島公園官方目前明載「每週三休園」，而 11/4/2026 正好是星期三。因此不把中ノ島公園當固定行程，避免到現場撲空。這天改成真正的 recovery day：直接去清滝。</div>
-<div class="leg"><div class="route">① 飯店 → 西鉄福岡（天神） → 大橋</div><div class="meta">步行到西鐵福岡（天神）約 6–8 分；搭天神大牟田線到 <b>大橋駅</b>，約 4–8 分。</div><div class="fare">¥240／人／單程；Suica。</div></div>
-<div class="leg"><div class="route">② 大橋駅 → 那珂川清滝</div><div class="meta">到 <b>大橋駅 東口バスロータリー</b>搭清滝免費巡回巴士。<br><b>推薦：10:00 → 10:27</b><br>早一班：09:30 → 09:57；晚一班：10:30 → 10:57。</div><div class="fare">免費。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.nakagawaseiryu.jp/access.html">清滝官方交通</a></div></div>
-<div class="leg"><div class="route">③ 午餐＋家族湯</div><div class="meta">食事処棗 11:30 起。家族風呂是 <b>50 分鐘</b>；11/4 為平日，一般料金目前 ¥3,500／1房（另有入館料）。翌月預約每月 20 日開始，因此 <b>10/20 起處理 11 月預約</b>。</div>
-<div class="addr"><b>Taxi Backup／目的地：</b>〒811-1236 福岡県那珂川市南面里326 源泉野天風呂 那珂川清滝</div><div class="btns"><button class="copy" onclick="cp('〒811-1236 福岡県那珂川市南面里326 源泉野天風呂 那珂川清滝',this)">複製地址</button><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=源泉野天風呂+那珂川清滝">Maps</a></div></div>
-<div class="leg"><div class="route">④ 清滝 → 大橋</div><div class="meta">想維持原本下午回市區節奏，建議 <b>15:20 清滝發 → 15:45 大橋</b>。若想多休息：15:50→16:15、16:20→16:45。</div><div class="fare">免費。</div></div>
-<div class="leg"><div class="route">⑤ 大橋 → 西鉄福岡（天神）</div><div class="fare">¥240／人；Suica。</div></div>
-<div class="decision"><b>票券：</b>全天公共交通只有西鐵往返 ¥480／人＋免費接駁，所以任何一日 Pass 都不划算。</div>
+<section class="day" id="d5"><span class="status locked">路線已設計；Taxi 價當日看 GO</span><h2>Day 5｜11/4（三）筑紫耶馬渓小健行＋那珂川清滝</h2>
+<div class="warn"><b>先講清楚：</b>中ノ島公園每週三休園，所以不去。但筑紫耶馬渓／南畑公園是不同地點。那珂川市官方把南畑公園列在筑紫耶馬渓內，秋季可看紅葉；這裡適合做 35–40 分鐘「輕健行／溪谷散步」，不是正式登山。</div>
+<div class="step"><div class="route">Step 1｜飯店 → 西鉄福岡（天神） → 大橋</div>
+<div class="do">飯店步行 6–8 分鐘到西鉄福岡（天神）→ 搭天神大牟田線到 <b>大橋駅</b>。</div><div class="fare">¥240／人；Suica。</div></div>
+<div class="step"><div class="route">Step 2｜大橋駅東口 → 清滝｜先用免費接駁把長距離吃掉</div>
+<div class="do">到 <b>大橋駅 東口バスロータリー</b>搭清滝免費巡回巴士。推薦 <b>09:30 → 09:57</b> 抵達清滝。</div>
+<div class="decision">這樣比從大橋直接 Taxi 去山區省很多。到清滝門口後再叫 Taxi 做短距離「清滝 ↔ 南畑公園」。</div>
+<div class="btns"><a class="btn" href="https://www.nakagawaseiryu.jp/access.html" target="_blank" rel="noopener">清滝官方交通</a></div></div>
+<div class="step"><div class="route">Step 3｜清滝 → 南畑公園｜Taxi</div>
+<div class="do">抵達清滝後，在入口處叫 Taxi。<b>建議直接跟司機約好約 45–50 分鐘後回原下車處接你們</b>，因為山區沒有 Taxi 排班站，這比走完再臨時叫車可靠。</div>
+<div class="addr"><b>Taxi 目的地：</b>南畑公園｜福岡県那珂川市大字五ケ山字ウツヲ915-39</div>
+<div class="btns"><button class="copy" onclick="cp('福岡県那珂川市大字五ケ山字ウツヲ915-39 南畑公園',this)">複製南畑公園地址</button><a class="btn" href="https://www.google.com/maps/search/?api=1&query=南畑公園+那珂川市" target="_blank" rel="noopener">Maps</a></div>
+<div class="fare"><b>Taxi 金額：</b>沒有官方固定價，不填假數字。用 GO／現場車隊的即時報價；三人一起坐，按一車計。</div></div>
+<div class="step"><div class="route">Step 4｜南畑公園 35–40 分鐘輕健行</div>
+<div class="do"><b>操作方式：</b>同一個點下車、同一個點回來。進公園後沿可見的公園／溪谷步道散步，走 <b>17–20 分鐘</b>就折返，總步行約 35–40 分鐘。以紅葉、溪谷、拍照為主。</div>
+<div class="dont"><b>不要：</b>沿國道 385 號為了「多走一點」往南畑水壩硬走。官方沒有提供一條給一般遊客的固定短登山 trail map；你們這天後面還要泡湯，所以只做 out-and-back。</div>
+<div class="backup"><b>雨天：</b>直接取消 hiking，留在清滝。這不是必去景點。</div></div>
+<div class="step"><div class="route">Step 5｜南畑公園 → 清滝｜Taxi 回原點</div>
+<div class="addr"><b>目的地：</b>〒811-1236 福岡県那珂川市南面里326 源泉野天風呂 那珂川清滝</div>
+<div class="btns"><button class="copy" onclick="cp('〒811-1236 福岡県那珂川市南面里326 源泉野天風呂 那珂川清滝',this)">複製清滝地址</button><a class="btn" href="https://www.google.com/maps/search/?api=1&query=源泉野天風呂+那珂川清滝" target="_blank" rel="noopener">Maps</a></div></div>
+<div class="step"><div class="route">Step 6｜11:30 午餐 → 家族湯 50 分鐘 → 休息</div>
+<div class="do">食事処棗 11:30 起。家族風呂官方為 <b>50 分鐘</b>；爸媽一起家族風呂，你去女大浴場。翌月預約每月 20 日開始，所以 <b>10/20 起處理 11 月預約</b>。</div></div>
+<div class="step"><div class="route">Step 7｜清滝 → 大橋 → 天神</div>
+<div class="do">主抓 <b>15:20 清滝 → 15:45 大橋</b>免費接駁；想多休息可用 15:50→16:15 或 16:20→16:45。大橋再搭西鐵回天神。</div><div class="fare">大橋→天神 ¥240／人；Suica。</div></div>
+<div class="decision"><b>今天的價格邏輯：</b>公共交通只花西鐵往返 ¥480／人；真正的額外成本是「清滝↔南畑公園」兩段 Taxi。這比大橋一路 Taxi 到山區更符合效率／價格平衡。</div>
 </section>
 
-<section class="day" id="d6"><h2>Day 6｜11/5（四）大濠公園 → 機場</h2>
-<div class="leg"><div class="route">① 飯店 → 天神駅 → 大濠公園駅</div><div class="meta">飯店步行至地下鐵 <b>天神駅</b>約 7 分；搭空港線到 <b>大濠公園駅</b>，約 3–4 分、無轉乘。</div><div class="fare">¥210／人／單程；Suica。往返 ¥420。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=東急ステイ福岡天神&destination=大濠公園&travelmode=transit">Google Maps</a></div></div>
-<div class="leg"><div class="route">② 大濠公園 → 飯店 → 最後午餐／取行李</div><div class="meta">回程同樣大濠公園駅 → 天神駅。11:00 退房，午餐控制到約 12:10 左右，預留走到巴士總站的時間。</div></div>
-<div class="leg"><div class="route">③ 西鉄天神高速バスターミナル → 福岡空港 國際線</div>
-<div class="meta">上車：<b>6番のりば</b>。下車：<b>福岡空港國際線</b>。中途不停站。<br><b>推薦 12:49 → 約 13:19</b>：距 16:20 起飛約 3 小時。<br>Backup：13:24 → 約 13:54。</div>
-<div class="fare">Suica ¥480／人（現金 ¥500）。</div>
-<div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.nishitetsu.jp/bus/rosen/airportexpress/">官方 Airport Express</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=西鉄天神高速バスターミナル&destination=福岡空港+国際線旅客ターミナル&travelmode=transit">Maps</a></div></div>
-<div class="addr"><b>Taxi Backup 目的地：</b>福岡空港 国際線旅客ターミナルビル</div><div class="btns"><button class="copy" onclick="cp('福岡空港 国際線旅客ターミナルビル',this)">複製機場目的地</button></div>
-<div class="decision"><b>地下鐵一日券不買：</b>這天天神↔大濠只有 ¥420；加機場巴士是另一家公司／路線，也不會讓地下鐵一日券變划算。</div>
+<section class="day" id="d6"><span class="status locked">已鎖定</span><h2>Day 6｜11/5（四）大濠公園 → 飯店 → 機場</h2>
+<div class="step"><div class="route">Step 1｜飯店 → 天神駅 → 大濠公園駅</div>
+<div class="do">從飯店走到福岡市地下鐵 <b>天神駅</b> → 搭空港線 → <b>大濠公園駅</b>，無轉乘。</div>
+<div class="fare">¥210／人／單程；Suica。</div><div class="btns"><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=東急ステイ福岡天神&destination=大濠公園&travelmode=transit" target="_blank" rel="noopener">Maps</a></div></div>
+<div class="step"><div class="route">Step 2｜大濠公園 → 天神 → 飯店退房</div>
+<div class="do">回程同一路線，大濠公園駅 → 天神駅。不要為了走路壓縮 11:00 checkout。</div><div class="fare">往返地下鐵共 ¥420／人。</div></div>
+<div class="step"><div class="route">Step 3｜最後午餐後，取行李 → 天神高速巴士總站</div>
+<div class="do">控制午餐約 12:10 左右結束，回飯店取行李，再走到 <b>西鉄天神高速バスターミナル</b>。</div></div>
+<div class="step"><div class="route">Step 4｜天神 → 福岡空港國際線</div>
+<div class="do">上車：<b>6番のりば</b> → 下車：<b>福岡空港 国際線</b>。Airport Express 中途不停站。</div>
+<div class="fare">Suica ¥480／人；現金 ¥500。</div>
+<div class="backup"><b>目標：</b>搭約 12:49 班次，到機場約 13:19，距 16:20 起飛約 3 小時。若吃飯拖到，再搭後續班次；出發前一週以官方表再核一次。</div>
+<div class="btns"><a class="btn" href="https://www.nishitetsu.jp/bus/rosen/airportexpress/" target="_blank" rel="noopener">官方 Airport Express</a><a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=西鉄天神高速バスターミナル&destination=福岡空港+国際線旅客ターミナル&travelmode=transit" target="_blank" rel="noopener">Maps</a></div></div>
+<div class="step"><div class="route">Step 5｜Taxi Backup</div>
+<div class="addr"><b>直接貼 GO：</b>福岡空港 国際線旅客ターミナルビル</div><div class="btns"><button class="copy" onclick="cp('福岡空港 国際線旅客ターミナルビル',this)">複製</button></div>
+<div class="decision"><b>今天不買地下鐵一日券。</b>大濠往返 ¥420，Airport Express 又不是地下鐵，所以單刷 Suica 最省。</div></div>
 </section>
 
-<section class="day"><h2>Taxi 使用原則</h2>
-<p>這份手冊只在「真正能省轉乘、下雨、行李、或錯過班次」時把 Taxi 當 Backup。日本計程車費會依實際里程、時間、塞車、迎車費等變動；沒有官方固定報價的路段，我不填看似精準但可能誤導的數字。請用 GO app 下單前的即時估價決定。</p>
-<div class="addr"><b>飯店</b><br>〒810-0003 福岡県福岡市中央区春吉3-21-24 東急ステイ福岡天神<br><button class="copy" onclick="cp('〒810-0003 福岡県福岡市中央区春吉3-21-24 東急ステイ福岡天神',this)">複製</button></div>
-<div class="addr"><b>竈門神社</b><br>〒818-0115 福岡県太宰府市内山883 宝満宮竈門神社<br><button class="copy" onclick="cp('〒818-0115 福岡県太宰府市内山883 宝満宮竈門神社',this)">複製</button></div>
-<div class="addr"><b>那珂川清滝</b><br>〒811-1236 福岡県那珂川市南面里326 源泉野天風呂 那珂川清滝<br><button class="copy" onclick="cp('〒811-1236 福岡県那珂川市南面里326 源泉野天風呂 那珂川清滝',this)">複製</button></div>
-<div class="addr"><b>中ノ島公園（目前 11/4 不去；僅備查）</b><br>〒811-1233 福岡県那珂川市市ノ瀬445-1 中ノ島公園<br><button class="copy" onclick="cp('〒811-1233 福岡県那珂川市市ノ瀬445-1 中ノ島公園',this)">複製</button></div>
+<section class="day"><h2>出發前最後 5 分鐘檢查</h2>
+<div class="step"><div class="route">每天早上</div><div class="do">① 三張 Suica 有餘額　② 手機網路正常　③ GO 已登入　④ 點一次當天 Maps　⑤ 看官方運行狀況。</div></div>
+<div class="step"><div class="route">10 月要再鎖一次的只有這些</div><div class="do"><b>11/1 八女：</b>2026/10 西鐵巴士改點後，鎖定「天神→久留米」與「久留米→福島」主班＋Backup，並讀出福島精確 IC fare。<br><b>11/3：</b>出發前看文化日臨時運休。<br><b>11/5：</b>Airport Express 出發前一週再核班次。</div></div>
 </section>
 
-<section class="day"><h2>資料可信度／最後檢查</h2>
-<p class="check">已按 2026/9/30 能查到的官方資料整理。</p>
-<ul>
-<li>Airport Express：西鐵 2026/4/1 時刻與票價。</li>
-<li>太宰府まほろば号：太宰府市 2026/4/1 平日時刻表。</li>
-<li>FUKUOKA WIDE Mobile Pass：JR 九州現行 2日 ¥3,500；不含博多～小倉山陽新幹線。</li>
-<li>2枚きっぷ：JR 九州 2026/7/1 調價，博多～門司港 ¥4,200。</li>
-<li>清滝 shuttle：官方現行時刻表；中ノ島公園：那珂川市官方明載每週三休園。</li>
-</ul>
-<p class="muted">出發前 3–7 天仍要快速確認臨時運休、施工、天候與班次改點；尤其 11/3 為文化日。</p>
+<section class="day"><h2>官方查證來源</h2>
+<p class="source">Airport Express：<a href="https://www.nishitetsu.jp/bus/rosen/airportexpress/" target="_blank" rel="noopener">西鐵官方</a>｜八女交通：<a href="https://jik.nishitetsu.jp/" target="_blank" rel="noopener">西鐵時刻・運賃</a>｜太宰府：<a href="https://www.city.dazaifu.lg.jp/site/communitybus/46670.html" target="_blank" rel="noopener">太宰府市 2026/4/1 時刻表</a>｜JR Pass：<a href="https://www.jrkyushu.co.jp/english/railpass/mobilepass.html" target="_blank" rel="noopener">JR九州 Mobile Pass</a>｜筑紫耶馬渓：<a href="https://www.city.nakagawa.lg.jp/soshiki/35/chikushi-yabakei.html" target="_blank" rel="noopener">那珂川市</a>｜中ノ島公園休園：<a href="https://www.city.nakagawa.lg.jp/soshiki/35/nakanoshima-park.html" target="_blank" rel="noopener">那珂川市</a>｜清滝家族風呂：<a href="https://www.nakagawaseiryu.jp/2026/06/-20267-20.html" target="_blank" rel="noopener">清滝官方</a></p>
+<p class="muted">最後更新：2026/09/30。原則：不為看起來完整而填沒有可靠來源的 Taxi 價／班次。</p>
 </section>
-<p class="muted">最後更新：2026/09/30</p>
 </main></body></html>
